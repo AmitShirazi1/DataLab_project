@@ -4,7 +4,7 @@ These are the contents of each file:
 ### leetcode_problems&solutions_links.csv
 problem name, link to it, difficulty, link to solution.
 
-### leetcode_problems_data.csv\.json
+### leetcode_problems_data.csv or .json
 question id, question title, its content, difficulty, num of likes, num of dislikes, slug (name in scraping format).
 
 ### leetcode_problems_metadata.csv
