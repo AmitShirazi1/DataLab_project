@@ -1,108 +1,158 @@
 # Databricks notebook source
-# DBTITLE 1,hadar and claude
-import React, { useState } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-
-const PersonalityTest = () => {
-  const [answers, setAnswers] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const questions = [
-    { id: 1, text: "I enjoy meeting new people" },
-    { id: 2, text: "I like helping others" },
-    { id: 3, text: "I adapt well to change" },
-    { id: 4, text: "I prefer working in teams" },
-    { id: 5, text: "I enjoy learning new skills" }
-  ];
-
-  const options = [
-    { value: 1, label: "Strongly Disagree" },
-    { value: 2, label: "Disagree" },
-    { value: 3, label: "Unsure" },
-    { value: 4, label: "Agree" },
-    { value: 5, label: "Strongly Agree" }
-  ];
-
-  const handleAnswer = (questionId, value) => {
-    setAnswers(prev => ({
-      ...prev,
-      [questionId]: value
-    }));
-  };
-
-  const handleSubmit = () => {
-    setIsSubmitted(true);
-    // Here you can add logic to send the results to your backend
-    console.log(answers);
-  };
-
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle>Personality Assessment</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-6">
-          {questions.map((question) => (
-            <div key={question.id} className="space-y-2">
-              <div className="flex items-center gap-4">
-                <span className="min-w-8">{question.id}</span>
-                <span className="flex-grow">{question.text}</span>
-              </div>
-              <div className="grid grid-cols-5 gap-2">
-                {options.map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => handleAnswer(question.id, option.value)}
-                    className={`p-2 rounded-full w-6 h-6 flex items-center justify-center border ${
-                      answers[question.id] === option.value
-                        ? 'bg-blue-500 border-blue-500 text-white'
-                        : 'border-gray-300'
-                    }`}
-                  >
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-          <Button 
-            onClick={handleSubmit}
-            className="w-full mt-4"
-            disabled={Object.keys(answers).length !== questions.length}
-          >
-            Submit
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-export default PersonalityTest;
+# MAGIC %md
+# MAGIC scraping 123test
 
 # COMMAND ----------
 
-# DBTITLE 1,scraping
+pip install requests beautifulsoup4
+
+# COMMAND ----------
+
 import requests
 from bs4 import BeautifulSoup
-import streamlit as st
-import pandas as pd
+import csv
 
-def scrape_personality_test():
-    url = "https://www.123test.com/personality-test/"
+# Function to scrape the webpage
+def scrape_website(url, tag, class_name=None):
+    # Send a request to the website
+    response = requests.get(url)
+    if response.status_code != 200:
+        print(f"Failed to fetch the webpage. Status code: {response.status_code}")
+        return []
+
+    # Parse the HTML content
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Find all elements with the specified tag and class
+    if class_name:
+        elements = soup.find_all(tag, class_=class_name)
+    else:
+        elements = soup.find_all(tag)
+
+    # Extract and return text content
+    return [element.text.strip() for element in elements]
+
+# Function to save data to a CSV file
+def save_to_csv(data, filename="output.csv"):
+    with open(filename, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Content"])  # Header
+        for row in data:
+            writer.writerow([row])
+
+
+
+# COMMAND ----------
+
+# URL of the website to scrape
+url = "https://www.123test.com/personality-test/" 
+
+# HTML tag and class to extract
+tag = "div"  
+class_name = "its123-label-text"
+
+# Scrape the website
+scraped_data = scrape_website(url, tag, class_name)
+
+# Save the data to a CSV file
+if scraped_data:
+    save_to_csv(scraped_data, filename="big_5_test.csv")
+    print(f"Scraped {len(scraped_data)} items and saved to big_5_test.csv")
+else:
+    print("Something went worng! No data scraped.")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ---
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC trying to make the test (from the csv files)
+
+# COMMAND ----------
+
+pip install streamlit pandas google-generativeai
+API_KEY = 'AIzaSyBEV89GjyAbAUgTunqeyHNlPvHuTR7K3X8'
+
+# COMMAND ----------
+
+import csv
+from tabulate import tabulate
+
+def load_questions(filename):
+    """Load questions from a CSV file."""
+    with open(filename, mode='r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip the header
+        questions = [row[0] for row in reader]
+    return questions
+
+def conduct_test(questions):
+    """Conduct the test by presenting questions and collecting responses."""
+    data = [
+    [1, "Strongly Disagree", "If you strongly disagree or if the statement is definitely false"],
+    [2, "Disagree", "If you disagree or if the statement is mostly false"],
+    [3, "Neutral", "If you are neutral about the statement, if you cannot decide, or if the statement is about equally true and false"],
+    [4, "Agree", "If you agree or if the statement is mostly true"],
+    [5, "Strongly Agree", "If you strongly agree or if the statement is definitely true"]
+    ]
+
+    print("This will be a simulation of a personality test.")
+    print("In this test you will be required to answer the following questions on a scale from 1 to 5.")
+    print(tabulate(data, headers=["Scale", "Rating", "Description"], tablefmt="grid"))
+    print("Please enter a number between 1 and 5 for each question:\n")
     
-    # Add headers to avoid being blocked
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
+    responses = []
+    for i, question in enumerate(questions, start=1):
+        print(f"{i}. {question}")
+        while True:
+            try:
+                response = int(input("Your response (1-5): "))
+                if response in range(1, 6):
+                    responses.append(response)
+                    break
+                else:
+                    print("Invalid input. Please enter a number between 1 and 5.")
+            except ValueError:
+                print("Invalid input. Please enter a number between 1 and 5.")
     
-    response = requests.get(url, headers=headers)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    return responses
+
+def save_responses(responses, filename="responses.csv"):
+    """Save user responses to a CSV file."""
+    with open(filename, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Question Number", "Response"])
+        for i, response in enumerate(responses, start=1):
+            writer.writerow([i, response])
+
+
+# COMMAND ----------
+
+# Load the questions from the CSV file
+questions = load_questions("big_5_test.csv")
+
+# Conduct the test and collect responses
+if questions:
+    responses = conduct_test(questions)
     
-    # Extract questions (this is a placeholder - you'll need to adjust selectors based on actual HTML structure)
-    questions = soup.find_all('div', class_='question-text')  
-    return [q.text.strip() for q in questions]
+    # Save responses
+    save_responses(responses)
+    print("\nThank you for completing the test! Your responses have been saved to 'responses.csv'.")
+else:
+    print("No questions found in the CSV file.")
+
+
+# COMMAND ----------
+
+
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ---
 
 # COMMAND ----------
 
@@ -177,14 +227,6 @@ if __name__ == "__main__":
 
 # MAGIC %md
 # MAGIC big 5 (OCEAN)
-
-# COMMAND ----------
-
-pip install streamlit pandas google-generativeai
-
-# COMMAND ----------
-
-API_KEY = 'AIzaSyBEV89GjyAbAUgTunqeyHNlPvHuTR7K3X8'
 
 # COMMAND ----------
 

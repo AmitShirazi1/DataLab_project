@@ -8,7 +8,7 @@ problem name, link to it, difficulty, link to solution.
 question id, question title, its content, difficulty, num of likes, num of dislikes, slug (name in scraping format).
 
 ### leetcode_problems_metadata.csv
-question id, page number (where the question is), is it a premium question, title, problem description, topic, difficulty, a list of similar questions, number of similar questions, acceptance rate, number of accepted submissions of this problem, number of submissions of this problem, number of submitted solutions (in the solution section), num of discussions, num of likes, num of dislikes, link to problem, link to solution.
+question id, page number (where the question is), is it a premium question, title, problem description, topic, difficulty, a list of similar questions, number of similar questions, acceptance rate (% of right solutions, indicates how hard the question was), number of accepted submissions of this problem, number of submissions of this problem, number of submitted solutions (in the solution section), num of discussions, num of likes, num of dislikes, link to problem, link to solution.
 
 Source: https://www.kaggle.com/datasets/jaydeepagravat94583/leetcode?resource=download
 
@@ -23,7 +23,12 @@ Common interview questions - general ones that are always embarrassing.
 
 Source: https://www.glassdoor.com/blog/common-interview-questions/
 
-## Leetcode solutions are at:
+### big_5_test.csv
+Big Five Personality Test (a.k.a OCEAN questions) offers a concise measure of the five major factors of personality, as well as the six facets that define each factor. Factor scores give a broad global description of an individual. Facet scores describe, in more detail, the specific traits of personality that make up the broad global description.
+
+Source: https://www.123test.com/personality-test/
+
+### Leetcode solutions are at:
 https://github.com/fishercoder1534/Leetcode/tree/master/src/main/java/com/fishercoder/solutions    
 To access solutions, there are 4 folders:
 - firstthousand/
