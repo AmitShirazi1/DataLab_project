@@ -7,7 +7,7 @@ job id, job category, job title, job description, required skill set.
 Source: https://www.kaggle.com/datasets/batuhanmutlu/job-skill-set
 
 ### linkedin_hightech_jobs.csv
-url,job_posting_id,job_title,company_name,company_id,job_location,job_summary,applay_link,job_seniority_level,job_function,job_employment_type,job_industries,job_base_pay_range,company_url,job_posted_time,job_num_applicants,discovery_input.
+url,job_posting_id,job_title,company_name,company_id,job_location,job_summary,apply_link,job_seniority_level,job_function,job_employment_type,job_industries,job_base_pay_range,company_url,job_posted_time,job_num_applicants,discovery_input.
 
 Source: Itamar
 
@@ -33,3 +33,7 @@ got it from https://github.com/Mlawrence95/LinkedIn-Tech-Job-Data?tab=readme-ov-
 ### Couldn't load file: linkedin_124k_kaggle.csv
 Source: Sergiy,    
 got it from https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
+
+## Unified datasets:
+### all_jobpostings.csv
+job_id, field, job_title, job_summary, skills, company_name, apply_link, job_seniority_level, company_industry, level, Seniority, level, post_link

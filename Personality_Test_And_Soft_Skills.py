@@ -69,6 +69,7 @@ else:
 
 # COMMAND ----------
 
+# DBTITLE 1,GPT first attempt
 import pandas as pd
 import random
 from typing import List
@@ -138,17 +139,7 @@ simulator.provide_feedback(responses)
 
 # MAGIC %md
 # MAGIC ---
-# MAGIC the way we will calculate the results
-
-# COMMAND ----------
-
-
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ---
-# MAGIC trying to create the test (from the csv files)
+# MAGIC trying to create the IPIP-120 test (from the csv files)
 
 # COMMAND ----------
 
@@ -228,9 +219,11 @@ else:
 
 # MAGIC %md
 # MAGIC ---
+# MAGIC codes i need to delete later
 
 # COMMAND ----------
 
+# DBTITLE 1,example with streamlit
 import streamlit as st
 import google.generativeai as genai
 
@@ -300,12 +293,7 @@ if __name__ == "__main__":
 
 # COMMAND ----------
 
-# MAGIC %md
-# MAGIC ---
-# MAGIC big 5 (OCEAN)
-
-# COMMAND ----------
-
+# DBTITLE 1,big 5 (OCEAN)
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd

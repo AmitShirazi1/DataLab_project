@@ -41,3 +41,12 @@ To access solutions, there are 4 folders:
 
 So, for example, if you want to access the solution of problem number 2017, it's in the link:    
 https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/thirdthousand/_2017.java
+
+
+## Unified databases we created:
+
+### all_code_problems_with_solutions.csv
+question_id,content,difficulty,formatted_title,topic_tags,similar_questions,no_similar_questions,acceptance,solution_URL,solution
+
+### all_open_questions.csv
+question_id,question,category,topics
