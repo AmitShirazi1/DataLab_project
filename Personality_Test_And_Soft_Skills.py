@@ -65,11 +65,90 @@ else:
 
 # MAGIC %md
 # MAGIC ---
+# MAGIC soft skills
+
+# COMMAND ----------
+
+import pandas as pd
+import random
+from typing import List
+
+class JobInterviewSimulator:
+    def __init__(self, csv_file: str):
+        self.questions_df = pd.read_csv(csv_file)  # Load common questions
+        self.cv_info = {}
+
+    def parse_cv(self, cv_text: str):
+        # Dummy parser (replace with an actual parsing logic for structured data)
+        self.cv_info = {
+            "skills": ["Python", "Machine Learning"],
+            "experience": ["Data Scientist at XYZ", "Intern at ABC"],
+            "education": ["BSc in Computer Science"],
+        }
+        print("CV Parsed:", self.cv_info)
+
+    def generate_questions(self, job_post: str) -> List[str]:
+        # Generate tailored questions based on CV and job post
+        tailored_questions = [
+            f"Can you explain how you used {skill} in your previous role?" for skill in self.cv_info.get("skills", [])
+        ]
+        tailored_questions.append(f"How does your experience at {self.cv_info.get('experience', [''])[0]} prepare you for this {job_post} position?")
+        
+        # Add some general questions from CSV
+        common_questions = self.questions_df.sample(n=5)["question"].tolist()
+        
+        return tailored_questions + common_questions
+
+    def ask_questions(self, questions: List[str]):
+        print("\n--- Interview Questions ---")
+        user_responses = {}
+        for i, question in enumerate(questions, start=1):
+            print(f"Q{i}: {question}")
+            response = input(f"Your Answer: ")  # Replace with a GUI text box for real applications
+            user_responses[f"Q{i}"] = response
+        
+        return user_responses
+
+    def provide_feedback(self, responses: dict):
+        print("\n--- Feedback ---")
+        for q, answer in responses.items():
+            # Dummy feedback logic (replace with NLP-powered analysis for structure, tone, etc.)
+            feedback = "Great answer!" if len(answer) > 10 else "Try to elaborate more."
+            print(f"{q}: {feedback}")
+
+# Example usage:
+simulator = JobInterviewSimulator(csv_file="common_questions.csv")
+
+# 1. Parse CV
+cv_text = """Sample CV text here..."""  # Replace with text extraction logic
+simulator.parse_cv(cv_text)
+
+# 2. Generate Questions
+job_post = "Data Scientist"
+questions = simulator.generate_questions(job_post)
+
+# 3. Ask Questions
+responses = simulator.ask_questions(questions)
+
+# 4. Provide Feedback
+simulator.provide_feedback(responses)
+
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC trying to make the test (from the csv files)
+# MAGIC ---
+# MAGIC the way we will calculate the results
+
+# COMMAND ----------
+
+
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ---
+# MAGIC trying to create the test (from the csv files)
 
 # COMMAND ----------
 
@@ -92,11 +171,11 @@ def load_questions(filename):
 def conduct_test(questions):
     """Conduct the test by presenting questions and collecting responses."""
     data = [
-    [1, "Strongly Disagree", "If you strongly disagree or if the statement is definitely false"],
-    [2, "Disagree", "If you disagree or if the statement is mostly false"],
-    [3, "Neutral", "If you are neutral about the statement, if you cannot decide, or if the statement is about equally true and false"],
-    [4, "Agree", "If you agree or if the statement is mostly true"],
-    [5, "Strongly Agree", "If you strongly agree or if the statement is definitely true"]
+    [1, "Very Inaccurate", "If you strongly disagree or if the statement is definitely false"],
+    [2, "Moderately Inaccurate", "If you disagree or if the statement is mostly false"],
+    [3, "Neither Accurate Nor Inaccurate", "If you are neutral about the statement, if you cannot decide, or if the statement is about equally true and false"],
+    [4, "Moderately Accurate", "If you agree or if the statement is mostly true"],
+    [5, "Very Accurate", "If you strongly agree or if the statement is definitely true"]
     ]
 
     print("This will be a simulation of a personality test.")
@@ -143,10 +222,6 @@ if questions:
     print("\nThank you for completing the test! Your responses have been saved to 'responses.csv'.")
 else:
     print("No questions found in the CSV file.")
-
-
-# COMMAND ----------
-
 
 
 # COMMAND ----------
@@ -226,6 +301,7 @@ if __name__ == "__main__":
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC ---
 # MAGIC big 5 (OCEAN)
 
 # COMMAND ----------

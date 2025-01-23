@@ -1,4 +1,111 @@
 # Databricks notebook source
+import requests
+import pandas as pd
+import json
+import time
+from datetime import datetime
+
+## checking on 1 problem with solution_URL
+def fetch_leetcode_problems():
+    # Convert question names to slugs
+    # question_names = question_names_df['name'].tolist()
+    # title_slugs = [name.replace(" ", "-").lower() for name in question_names]  # Lowercase to match LeetCode URL format
+    title_slugs = ["Two-Sum"]
+    
+    # Define headers
+    headers = {
+        'User-Agent': 'Mozilla/5.0',
+        'Content-Type': 'application/json',
+    }
+
+    # GraphQL query
+    graphql_query = """
+    query getQuestion($titleSlug: String!) {
+        question(titleSlug: $titleSlug) {
+            questionId
+            title
+            content
+            difficulty
+            likes
+            dislikes
+        }
+    }
+    """
+
+    # List to store all problem data
+    all_problems_data = []
+
+    # Loop through the titleSlugs and fetch data
+    for title_slug in title_slugs:
+        variables = {"titleSlug": title_slug}
+        
+        try:
+            # Send request to LeetCode GraphQL endpoint
+            response = requests.post(
+                "https://leetcode.com/graphql/",
+                json={"query": graphql_query, "variables": variables},
+                headers=headers
+            )
+            
+            if response.status_code == 200:
+                question_data = response.json()
+                if 'data' in question_data and 'question' in question_data['data']:
+                    problem = question_data['data']['question']
+                    
+                    # Generate the solution URL
+                    solution_url = f"https://leetcode.com/problems/{title_slug}/solutions/"
+                    
+                    # Append problem data
+                    all_problems_data.append({
+                        'question_id': problem['questionId'],
+                        'title': problem['title'],
+                        'content': problem['content'],
+                        'difficulty': problem['difficulty'],
+                        'likes': problem['likes'],
+                        'dislikes': problem['dislikes'],
+                        'slug': title_slug,
+                        'solution_URL': solution_url  # Add solution URL
+                    })
+                    print(f"Successfully fetched data for: {title_slug}")
+                else:
+                    print(f"Invalid response format for {title_slug}")
+            else:
+                print(f"Failed to fetch data for {title_slug}: {response.status_code}")
+                
+            # Add a small delay to avoid rate limiting
+            time.sleep(1)
+            
+        except Exception as e:
+            print(f"Error processing {title_slug}: {str(e)}")
+            continue
+
+    # Create DataFrame from collected data
+    problems_df = pd.DataFrame(all_problems_data)
+    
+    # Generate timestamp for filename
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    # Save to CSV
+    csv_filename = f'leetcode_problems_data_{timestamp}.csv'
+    problems_df.to_csv(csv_filename, index=False, encoding='utf-8')
+    
+    # Save raw data to JSON (for backup)
+    json_filename = f'leetcode_problems_raw_{timestamp}.json'
+    with open(json_filename, 'w', encoding='utf-8') as f:
+        json.dump(all_problems_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"\nData saved to {csv_filename} and {json_filename}")
+    return problems_df
+
+# Usage
+if __name__ == "__main__":
+    # question_names_df = pd.read_csv('leetcode_problems.csv')
+    # problems_df = fetch_leetcode_problems(question_names_df)
+    problems_df = fetch_leetcode_problems()
+
+
+# COMMAND ----------
+
 import pandas as pd
 
 question_names_df = pd.read_csv('leetcode_problems.csv')
@@ -14,6 +121,8 @@ import pandas as pd
 import json
 import time
 from datetime import datetime
+
+## checking on all problems with no solution_URL
 
 def fetch_leetcode_problems(question_names_df):
     # Convert question names to slugs
@@ -101,7 +210,7 @@ def fetch_leetcode_problems(question_names_df):
 
 # Usage
 if __name__ == "__main__":
-    question_names_df = pd.read_csv('leetcode_problems.csv')
+    question_names_df = pd.read_csv('/Workspace/Users/amit.shirazi@campus.technion.ac.il/project/data/questions_and_answers/leetcode_problems_data.csv')
     problems_df = fetch_leetcode_problems(question_names_df)
 
 # COMMAND ----------
