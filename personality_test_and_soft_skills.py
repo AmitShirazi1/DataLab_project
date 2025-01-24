@@ -143,6 +143,12 @@ simulator.provide_feedback(responses)
 
 # COMMAND ----------
 
+# Those are the test website links
+https://github.com/rubynor/bigfive-web
+https://bigfive-test.com/
+
+# COMMAND ----------
+
 pip install streamlit pandas google-generativeai
 API_KEY = 'AIzaSyBEV89GjyAbAUgTunqeyHNlPvHuTR7K3X8'
 
