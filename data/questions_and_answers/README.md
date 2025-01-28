@@ -24,10 +24,12 @@ Common interview questions - general ones that are always embarrassing.
 Source: https://www.glassdoor.com/blog/common-interview-questions/
 
 
-### questions_ipip_neo_120.csv and big_5_test.csv
+### OCEAN Test Folder
 Big Five Personality Test (a.k.a OCEAN questions) offers a concise measure of the five major factors of personality, as well as the six facets that define each factor. Factor scores give a broad global description of an individual. Facet scores describe, in more detail, the specific traits of personality that make up the broad global description.
+This folder contains all the json and csv files that we use for that test.
 
 Source: https://github.com/rubynor/bigfive-web/tree/master/old-packages/questions/data/en
+Source: https://github.com/rubynor/bigfive-web/tree/master/old-packages/results/test/data
 Source: https://www.123test.com/personality-test/
 
 
@@ -50,3 +52,6 @@ question_id,content,difficulty,formatted_title,topic_tags,similar_questions,no_s
 
 ### all_open_questions.csv
 question_id,question,category,topics
+
+### all_code_questions_with_topics.csv and all_open_questions_with_topics.csv
+The same as "..._with_solutions", but with null topics replaced with generation by Gemini.
