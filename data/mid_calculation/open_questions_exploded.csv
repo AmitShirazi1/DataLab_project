@@ -1,0 +1,514 @@
+question_id,question,category,topics,topic
+112,What are your strengths?,General,"Self-awareness, communication, self-promotion",Self-awareness
+112,What are your strengths?,General,"Self-awareness, communication, self-promotion", communication
+112,What are your strengths?,General,"Self-awareness, communication, self-promotion", self-promotion
+113,What are your weaknesses?,General,"Self-awareness, honesty, self-reflection, communication",Self-awareness
+113,What are your weaknesses?,General,"Self-awareness, honesty, self-reflection, communication", honesty
+113,What are your weaknesses?,General,"Self-awareness, honesty, self-reflection, communication", self-reflection
+113,What are your weaknesses?,General,"Self-awareness, honesty, self-reflection, communication", communication
+114,Why are you interested in working for [insert company name here]?,General,"Research skills, Communication skills, Persuasion skills, Self-awareness",Research skills
+114,Why are you interested in working for [insert company name here]?,General,"Research skills, Communication skills, Persuasion skills, Self-awareness", Communication skills
+114,Why are you interested in working for [insert company name here]?,General,"Research skills, Communication skills, Persuasion skills, Self-awareness", Persuasion skills
+114,Why are you interested in working for [insert company name here]?,General,"Research skills, Communication skills, Persuasion skills, Self-awareness", Self-awareness
+115,Where do you see yourself in five years? Ten years?,General,"Career planning, foresight, self-awareness, long-term goals, ambition",Career planning
+115,Where do you see yourself in five years? Ten years?,General,"Career planning, foresight, self-awareness, long-term goals, ambition", foresight
+115,Where do you see yourself in five years? Ten years?,General,"Career planning, foresight, self-awareness, long-term goals, ambition", self-awareness
+115,Where do you see yourself in five years? Ten years?,General,"Career planning, foresight, self-awareness, long-term goals, ambition", long-term goals
+115,Where do you see yourself in five years? Ten years?,General,"Career planning, foresight, self-awareness, long-term goals, ambition", ambition
+116,Why do you want to leave your current company?,General,"Communication skills, self-awareness, critical thinking, problem-solving",Communication skills
+116,Why do you want to leave your current company?,General,"Communication skills, self-awareness, critical thinking, problem-solving", self-awareness
+116,Why do you want to leave your current company?,General,"Communication skills, self-awareness, critical thinking, problem-solving", critical thinking
+116,Why do you want to leave your current company?,General,"Communication skills, self-awareness, critical thinking, problem-solving", problem-solving
+117,Why was there a gap in your employment between [insert date] and [insert date]?,General,"Communication skills, Honesty,  Problem-solving skills,  Self-awareness",Communication skills
+117,Why was there a gap in your employment between [insert date] and [insert date]?,General,"Communication skills, Honesty,  Problem-solving skills,  Self-awareness", Honesty
+117,Why was there a gap in your employment between [insert date] and [insert date]?,General,"Communication skills, Honesty,  Problem-solving skills,  Self-awareness",  Problem-solving skills
+117,Why was there a gap in your employment between [insert date] and [insert date]?,General,"Communication skills, Honesty,  Problem-solving skills,  Self-awareness",  Self-awareness
+118,What can you offer us that someone else can not?,General,"Self-promotion, differentiation, unique selling proposition, persuasive communication, concise communication",Self-promotion
+118,What can you offer us that someone else can not?,General,"Self-promotion, differentiation, unique selling proposition, persuasive communication, concise communication", differentiation
+118,What can you offer us that someone else can not?,General,"Self-promotion, differentiation, unique selling proposition, persuasive communication, concise communication", unique selling proposition
+118,What can you offer us that someone else can not?,General,"Self-promotion, differentiation, unique selling proposition, persuasive communication, concise communication", persuasive communication
+118,What can you offer us that someone else can not?,General,"Self-promotion, differentiation, unique selling proposition, persuasive communication, concise communication", concise communication
+119,What are three things your former manager would like you to improve on?,General,"Self-awareness, self-reflection, honesty, critical thinking",Self-awareness
+119,What are three things your former manager would like you to improve on?,General,"Self-awareness, self-reflection, honesty, critical thinking", self-reflection
+119,What are three things your former manager would like you to improve on?,General,"Self-awareness, self-reflection, honesty, critical thinking", honesty
+119,What are three things your former manager would like you to improve on?,General,"Self-awareness, self-reflection, honesty, critical thinking", critical thinking
+120,Are you willing to relocate?,General,"Adaptability, Willingness to relocate, Communication skills",Adaptability
+120,Are you willing to relocate?,General,"Adaptability, Willingness to relocate, Communication skills", Willingness to relocate
+120,Are you willing to relocate?,General,"Adaptability, Willingness to relocate, Communication skills", Communication skills
+121,Are you willing to travel? *(Post COVID-19),General,"Flexibility, Adaptability, Willingness to relocate",Flexibility
+121,Are you willing to travel? *(Post COVID-19),General,"Flexibility, Adaptability, Willingness to relocate", Adaptability
+121,Are you willing to travel? *(Post COVID-19),General,"Flexibility, Adaptability, Willingness to relocate", Willingness to relocate
+122,Tell me about an accomplishment you are most proud of.,General,"Communication skills, storytelling skills, self-reflection, critical thinking",Communication skills
+122,Tell me about an accomplishment you are most proud of.,General,"Communication skills, storytelling skills, self-reflection, critical thinking", storytelling skills
+122,Tell me about an accomplishment you are most proud of.,General,"Communication skills, storytelling skills, self-reflection, critical thinking", self-reflection
+122,Tell me about an accomplishment you are most proud of.,General,"Communication skills, storytelling skills, self-reflection, critical thinking", critical thinking
+123,Tell me about a time you made a mistake.,General,"Communication skills, self-reflection, storytelling, critical thinking",Communication skills
+123,Tell me about a time you made a mistake.,General,"Communication skills, self-reflection, storytelling, critical thinking", self-reflection
+123,Tell me about a time you made a mistake.,General,"Communication skills, self-reflection, storytelling, critical thinking", storytelling
+123,Tell me about a time you made a mistake.,General,"Communication skills, self-reflection, storytelling, critical thinking", critical thinking
+124,What is your dream job?,General,"Communication skills, Self-awareness, Career planning, Goal setting",Communication skills
+124,What is your dream job?,General,"Communication skills, Self-awareness, Career planning, Goal setting", Self-awareness
+124,What is your dream job?,General,"Communication skills, Self-awareness, Career planning, Goal setting", Career planning
+124,What is your dream job?,General,"Communication skills, Self-awareness, Career planning, Goal setting", Goal setting
+125,How did you hear about this position?,General,"Communication skills, Interpersonal skills",Communication skills
+125,How did you hear about this position?,General,"Communication skills, Interpersonal skills", Interpersonal skills
+126,What would you look to accomplish in the first 30 days/60 days/90 days on the job?,General,"Planning, Goal-setting, Prioritization, Time-management, Strategic thinking",Planning
+126,What would you look to accomplish in the first 30 days/60 days/90 days on the job?,General,"Planning, Goal-setting, Prioritization, Time-management, Strategic thinking", Goal-setting
+126,What would you look to accomplish in the first 30 days/60 days/90 days on the job?,General,"Planning, Goal-setting, Prioritization, Time-management, Strategic thinking", Prioritization
+126,What would you look to accomplish in the first 30 days/60 days/90 days on the job?,General,"Planning, Goal-setting, Prioritization, Time-management, Strategic thinking", Time-management
+126,What would you look to accomplish in the first 30 days/60 days/90 days on the job?,General,"Planning, Goal-setting, Prioritization, Time-management, Strategic thinking", Strategic thinking
+127,Discuss your resume.,General,"Communication skills, self-awareness, critical thinking, narrative skills",Communication skills
+127,Discuss your resume.,General,"Communication skills, self-awareness, critical thinking, narrative skills", self-awareness
+127,Discuss your resume.,General,"Communication skills, self-awareness, critical thinking, narrative skills", critical thinking
+127,Discuss your resume.,General,"Communication skills, self-awareness, critical thinking, narrative skills", narrative skills
+128,Discuss your educational background.,General,"Communication skills, Self-reflection, Organization skills",Communication skills
+128,Discuss your educational background.,General,"Communication skills, Self-reflection, Organization skills", Self-reflection
+128,Discuss your educational background.,General,"Communication skills, Self-reflection, Organization skills", Organization skills
+129,Describe yourself.,General,"Self-awareness, communication, articulation, self-reflection",Self-awareness
+129,Describe yourself.,General,"Self-awareness, communication, articulation, self-reflection", communication
+129,Describe yourself.,General,"Self-awareness, communication, articulation, self-reflection", articulation
+129,Describe yourself.,General,"Self-awareness, communication, articulation, self-reflection", self-reflection
+130,Tell me how you handled a difficult situation.,General,"Problem-solving, communication, critical thinking, storytelling, self-awareness",Problem-solving
+130,Tell me how you handled a difficult situation.,General,"Problem-solving, communication, critical thinking, storytelling, self-awareness", communication
+130,Tell me how you handled a difficult situation.,General,"Problem-solving, communication, critical thinking, storytelling, self-awareness", critical thinking
+130,Tell me how you handled a difficult situation.,General,"Problem-solving, communication, critical thinking, storytelling, self-awareness", storytelling
+130,Tell me how you handled a difficult situation.,General,"Problem-solving, communication, critical thinking, storytelling, self-awareness", self-awareness
+131,Why should we hire you?,General,"Communication skills, Persuasion skills, Self-awareness, Self-promotion, Problem-solving skills",Communication skills
+131,Why should we hire you?,General,"Communication skills, Persuasion skills, Self-awareness, Self-promotion, Problem-solving skills", Persuasion skills
+131,Why should we hire you?,General,"Communication skills, Persuasion skills, Self-awareness, Self-promotion, Problem-solving skills", Self-awareness
+131,Why should we hire you?,General,"Communication skills, Persuasion skills, Self-awareness, Self-promotion, Problem-solving skills", Self-promotion
+131,Why should we hire you?,General,"Communication skills, Persuasion skills, Self-awareness, Self-promotion, Problem-solving skills", Problem-solving skills
+132,Why are you looking for a new job?,General,"Communication skills, Self-awareness,  Problem-solving skills,  Critical thinking",Communication skills
+132,Why are you looking for a new job?,General,"Communication skills, Self-awareness,  Problem-solving skills,  Critical thinking", Self-awareness
+132,Why are you looking for a new job?,General,"Communication skills, Self-awareness,  Problem-solving skills,  Critical thinking",  Problem-solving skills
+132,Why are you looking for a new job?,General,"Communication skills, Self-awareness,  Problem-solving skills,  Critical thinking",  Critical thinking
+133,Would you work holidays/weekends?,General,"Flexibility,Availability,Commitment",Flexibility
+133,Would you work holidays/weekends?,General,"Flexibility,Availability,Commitment",Availability
+133,Would you work holidays/weekends?,General,"Flexibility,Availability,Commitment",Commitment
+134,How would you deal with an angry or irate customer?,General,"Conflict resolution, customer service, communication, empathy, problem-solving",Conflict resolution
+134,How would you deal with an angry or irate customer?,General,"Conflict resolution, customer service, communication, empathy, problem-solving", customer service
+134,How would you deal with an angry or irate customer?,General,"Conflict resolution, customer service, communication, empathy, problem-solving", communication
+134,How would you deal with an angry or irate customer?,General,"Conflict resolution, customer service, communication, empathy, problem-solving", empathy
+134,How would you deal with an angry or irate customer?,General,"Conflict resolution, customer service, communication, empathy, problem-solving", problem-solving
+135,"What are your salary requirements? (Hint: if you’re not sure what constitutes a fair salary range and compensation package, research the job title and/or company on Glassdoor.)",General,"Research skills, Negotiation skills, Self-awareness, Financial literacy",Research skills
+135,"What are your salary requirements? (Hint: if you’re not sure what constitutes a fair salary range and compensation package, research the job title and/or company on Glassdoor.)",General,"Research skills, Negotiation skills, Self-awareness, Financial literacy", Negotiation skills
+135,"What are your salary requirements? (Hint: if you’re not sure what constitutes a fair salary range and compensation package, research the job title and/or company on Glassdoor.)",General,"Research skills, Negotiation skills, Self-awareness, Financial literacy", Self-awareness
+135,"What are your salary requirements? (Hint: if you’re not sure what constitutes a fair salary range and compensation package, research the job title and/or company on Glassdoor.)",General,"Research skills, Negotiation skills, Self-awareness, Financial literacy", Financial literacy
+136,Give a time when you went above and beyond the requirements for a project.,General,"Problem-solving, Storytelling, Self-awareness,  Communication",Problem-solving
+136,Give a time when you went above and beyond the requirements for a project.,General,"Problem-solving, Storytelling, Self-awareness,  Communication", Storytelling
+136,Give a time when you went above and beyond the requirements for a project.,General,"Problem-solving, Storytelling, Self-awareness,  Communication", Self-awareness
+136,Give a time when you went above and beyond the requirements for a project.,General,"Problem-solving, Storytelling, Self-awareness,  Communication",  Communication
+137,Who are our competitors?,General,"Market analysis, competitive analysis, industry knowledge",Market analysis
+137,Who are our competitors?,General,"Market analysis, competitive analysis, industry knowledge", competitive analysis
+137,Who are our competitors?,General,"Market analysis, competitive analysis, industry knowledge", industry knowledge
+138,What was your biggest failure?,General,"Self-awareness, self-reflection, communication, storytelling, problem-solving",Self-awareness
+138,What was your biggest failure?,General,"Self-awareness, self-reflection, communication, storytelling, problem-solving", self-reflection
+138,What was your biggest failure?,General,"Self-awareness, self-reflection, communication, storytelling, problem-solving", communication
+138,What was your biggest failure?,General,"Self-awareness, self-reflection, communication, storytelling, problem-solving", storytelling
+138,What was your biggest failure?,General,"Self-awareness, self-reflection, communication, storytelling, problem-solving", problem-solving
+139,What motivates you?,General,"Self-awareness, communication, introspection",Self-awareness
+139,What motivates you?,General,"Self-awareness, communication, introspection", communication
+139,What motivates you?,General,"Self-awareness, communication, introspection", introspection
+140,What’s your availability?,General,"Communication skills, Interpersonal skills",Communication skills
+140,What’s your availability?,General,"Communication skills, Interpersonal skills", Interpersonal skills
+141,Who’s your mentor?,General,"Communication skills, Interpersonal skills, Self-awareness",Communication skills
+141,Who’s your mentor?,General,"Communication skills, Interpersonal skills, Self-awareness", Interpersonal skills
+141,Who’s your mentor?,General,"Communication skills, Interpersonal skills, Self-awareness", Self-awareness
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling",Conflict resolution
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling", communication
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling", diplomacy
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling", critical thinking
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling", self-awareness
+142,Tell me about a time when you disagreed with your boss.,General,"Conflict resolution, communication, diplomacy, critical thinking, self-awareness, storytelling", storytelling
+143,How do you handle pressure?,General,"Stress management, self-awareness, communication skills, problem-solving skills",Stress management
+143,How do you handle pressure?,General,"Stress management, self-awareness, communication skills, problem-solving skills", self-awareness
+143,How do you handle pressure?,General,"Stress management, self-awareness, communication skills, problem-solving skills", communication skills
+143,How do you handle pressure?,General,"Stress management, self-awareness, communication skills, problem-solving skills", problem-solving skills
+144,What is the name of our CEO?,General,Memory recall,Memory recall
+145,What are your career goals?,General,"Communication skills, Self-awareness, Goal setting, Planning skills",Communication skills
+145,What are your career goals?,General,"Communication skills, Self-awareness, Goal setting, Planning skills", Self-awareness
+145,What are your career goals?,General,"Communication skills, Self-awareness, Goal setting, Planning skills", Goal setting
+145,What are your career goals?,General,"Communication skills, Self-awareness, Goal setting, Planning skills", Planning skills
+146,What gets you up in the morning?,General,"Communication skills, Self-awareness, Motivation, Goal-setting",Communication skills
+146,What gets you up in the morning?,General,"Communication skills, Self-awareness, Motivation, Goal-setting", Self-awareness
+146,What gets you up in the morning?,General,"Communication skills, Self-awareness, Motivation, Goal-setting", Motivation
+146,What gets you up in the morning?,General,"Communication skills, Self-awareness, Motivation, Goal-setting", Goal-setting
+147,What would your direct reports say about you?,General,"Self-awareness, self-reflection, empathy, perspective-taking",Self-awareness
+147,What would your direct reports say about you?,General,"Self-awareness, self-reflection, empathy, perspective-taking", self-reflection
+147,What would your direct reports say about you?,General,"Self-awareness, self-reflection, empathy, perspective-taking", empathy
+147,What would your direct reports say about you?,General,"Self-awareness, self-reflection, empathy, perspective-taking", perspective-taking
+148,What were your bosses’ strengths/weaknesses?,General,"Critical thinking, communication, observation, self-awareness",Critical thinking
+148,What were your bosses’ strengths/weaknesses?,General,"Critical thinking, communication, observation, self-awareness", communication
+148,What were your bosses’ strengths/weaknesses?,General,"Critical thinking, communication, observation, self-awareness", observation
+148,What were your bosses’ strengths/weaknesses?,General,"Critical thinking, communication, observation, self-awareness", self-awareness
+149,"If I called your boss right now and asked him/her what is an area that you could improve on, what would he/she say?",General,"Self-awareness, self-assessment, honesty, critical thinking,  communication skills",Self-awareness
+149,"If I called your boss right now and asked him/her what is an area that you could improve on, what would he/she say?",General,"Self-awareness, self-assessment, honesty, critical thinking,  communication skills", self-assessment
+149,"If I called your boss right now and asked him/her what is an area that you could improve on, what would he/she say?",General,"Self-awareness, self-assessment, honesty, critical thinking,  communication skills", honesty
+149,"If I called your boss right now and asked him/her what is an area that you could improve on, what would he/she say?",General,"Self-awareness, self-assessment, honesty, critical thinking,  communication skills", critical thinking
+149,"If I called your boss right now and asked him/her what is an area that you could improve on, what would he/she say?",General,"Self-awareness, self-assessment, honesty, critical thinking,  communication skills",  communication skills
+150,Are you a leader or a follower?,General,"Self-awareness, self-assessment, introspection",Self-awareness
+150,Are you a leader or a follower?,General,"Self-awareness, self-assessment, introspection", self-assessment
+150,Are you a leader or a follower?,General,"Self-awareness, self-assessment, introspection", introspection
+151,What was the last book you read for fun?,General,Memory recall,Memory recall
+152,What are your co-worker pet peeves?,General,"Self-awareness, interpersonal skills, conflict resolution skills",Self-awareness
+152,What are your co-worker pet peeves?,General,"Self-awareness, interpersonal skills, conflict resolution skills", interpersonal skills
+152,What are your co-worker pet peeves?,General,"Self-awareness, interpersonal skills, conflict resolution skills", conflict resolution skills
+153,What are your hobbies?,General,"Communication skills, Self-awareness, Interpersonal skills",Communication skills
+153,What are your hobbies?,General,"Communication skills, Self-awareness, Interpersonal skills", Self-awareness
+153,What are your hobbies?,General,"Communication skills, Self-awareness, Interpersonal skills", Interpersonal skills
+154,What is your favorite website?,General,"Personal preference,Opinion expression",Personal preference
+154,What is your favorite website?,General,"Personal preference,Opinion expression",Opinion expression
+155,What makes you uncomfortable?,General,"Self-awareness, honesty, vulnerability, communication",Self-awareness
+155,What makes you uncomfortable?,General,"Self-awareness, honesty, vulnerability, communication", honesty
+155,What makes you uncomfortable?,General,"Self-awareness, honesty, vulnerability, communication", vulnerability
+155,What makes you uncomfortable?,General,"Self-awareness, honesty, vulnerability, communication", communication
+156,What are some of your leadership experiences / What is your leadership style?,General,"Leadership experience,Leadership style,Communication skills,Self-reflection",Leadership experience
+156,What are some of your leadership experiences / What is your leadership style?,General,"Leadership experience,Leadership style,Communication skills,Self-reflection",Leadership style
+156,What are some of your leadership experiences / What is your leadership style?,General,"Leadership experience,Leadership style,Communication skills,Self-reflection",Communication skills
+156,What are some of your leadership experiences / What is your leadership style?,General,"Leadership experience,Leadership style,Communication skills,Self-reflection",Self-reflection
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness",Communication skills
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness", interpersonal skills
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness", conflict resolution skills
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness", empathy
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness", decision-making skills
+157,How would you fire someone?,General,"Communication skills, interpersonal skills, conflict resolution skills, empathy, decision-making skills, legal awareness", legal awareness
+158,What do you like the most and least about working in this industry?,General,"Self-awareness, critical thinking, communication skills, reflection",Self-awareness
+158,What do you like the most and least about working in this industry?,General,"Self-awareness, critical thinking, communication skills, reflection", critical thinking
+158,What do you like the most and least about working in this industry?,General,"Self-awareness, critical thinking, communication skills, reflection", communication skills
+158,What do you like the most and least about working in this industry?,General,"Self-awareness, critical thinking, communication skills, reflection", reflection
+159,Would you work 40+ hours a week?,General,"Communication skills, Honesty, Work ethic",Communication skills
+159,Would you work 40+ hours a week?,General,"Communication skills, Honesty, Work ethic", Honesty
+159,Would you work 40+ hours a week?,General,"Communication skills, Honesty, Work ethic", Work ethic
+160,What questions haven’t I asked you?,General,"Metacognition, self-reflection, critical thinking",Metacognition
+160,What questions haven’t I asked you?,General,"Metacognition, self-reflection, critical thinking", self-reflection
+160,What questions haven’t I asked you?,General,"Metacognition, self-reflection, critical thinking", critical thinking
+161,What questions do you have for me?,General,"Communication skills, Inquiry skills, Critical thinking skills",Communication skills
+161,What questions do you have for me?,General,"Communication skills, Inquiry skills, Critical thinking skills", Inquiry skills
+161,What questions do you have for me?,General,"Communication skills, Inquiry skills, Critical thinking skills", Critical thinking skills
+1, What is padding,Data Science,"Understanding of terminology, basic computer science concepts",Understanding of terminology
+1, What is padding,Data Science,"Understanding of terminology, basic computer science concepts", basic computer science concepts
+2, Sigmoid Vs Softmax,Data Science,"Understanding of activation functions,machine learning,deep learning,classification",Understanding of activation functions
+2, Sigmoid Vs Softmax,Data Science,"Understanding of activation functions,machine learning,deep learning,classification",machine learning
+2, Sigmoid Vs Softmax,Data Science,"Understanding of activation functions,machine learning,deep learning,classification",deep learning
+2, Sigmoid Vs Softmax,Data Science,"Understanding of activation functions,machine learning,deep learning,classification",classification
+3, What is PoS Tagging,Data Science,"Vocabulary,Knowledge Recall",Vocabulary
+3, What is PoS Tagging,Data Science,"Vocabulary,Knowledge Recall",Knowledge Recall
+4, What is tokenization,Data Science,Understanding of NLP concepts,Understanding of NLP concepts
+5, What is topic modeling,Data Science,"Information retrieval, Knowledge comprehension",Information retrieval
+5, What is topic modeling,Data Science,"Information retrieval, Knowledge comprehension", Knowledge comprehension
+6, What is back propagation,Data Science,"Understanding of neural networks,Knowledge of deep learning algorithms",Understanding of neural networks
+6, What is back propagation,Data Science,"Understanding of neural networks,Knowledge of deep learning algorithms",Knowledge of deep learning algorithms
+7, What is the idea behind GANs,Data Science,"Knowledge recall, comprehension",Knowledge recall
+7, What is the idea behind GANs,Data Science,"Knowledge recall, comprehension", comprehension
+8, What is the Computational Graph,Data Science,"Understanding of machine learning concepts,Knowledge of deep learning fundamentals",Understanding of machine learning concepts
+8, What is the Computational Graph,Data Science,"Understanding of machine learning concepts,Knowledge of deep learning fundamentals",Knowledge of deep learning fundamentals
+9, What is sigmoid What does it do,Data Science,"Knowledge of definitions, Understanding of functions",Knowledge of definitions
+9, What is sigmoid What does it do,Data Science,"Knowledge of definitions, Understanding of functions", Understanding of functions
+10, What is Named-Entity Recognition,Data Science,"Knowledge of NLP terminology,Information retrieval",Knowledge of NLP terminology
+10, What is Named-Entity Recognition,Data Science,"Knowledge of NLP terminology,Information retrieval",Information retrieval
+11, Explain the masked language model,Data Science,"Explanation ability, Summarization, Knowledge of NLP concepts",Explanation ability
+11, Explain the masked language model,Data Science,"Explanation ability, Summarization, Knowledge of NLP concepts", Summarization
+11, Explain the masked language model,Data Science,"Explanation ability, Summarization, Knowledge of NLP concepts", Knowledge of NLP concepts
+12, How do you preprocess text in NLP,Data Science,"Natural Language Processing (NLP) knowledge, Text preprocessing techniques",Natural Language Processing (NLP) knowledge
+12, How do you preprocess text in NLP,Data Science,"Natural Language Processing (NLP) knowledge, Text preprocessing techniques", Text preprocessing techniques
+13, How do you extract features in NLP,Data Science,"Natural Language Processing (NLP),Feature Extraction",Natural Language Processing (NLP)
+13, How do you extract features in NLP,Data Science,"Natural Language Processing (NLP),Feature Extraction",Feature Extraction
+14, How is wordvec different from Glove,Data Science,"Knowledge of word embeddings, comparative analysis, understanding of NLP models",Knowledge of word embeddings
+14, How is wordvec different from Glove,Data Science,"Knowledge of word embeddings, comparative analysis, understanding of NLP models", comparative analysis
+14, How is wordvec different from Glove,Data Science,"Knowledge of word embeddings, comparative analysis, understanding of NLP models", understanding of NLP models
+15, What Are the Different Layers on CNN,Data Science,"Knowledge of Convolutional Neural Networks,Understanding of CNN architecture",Knowledge of Convolutional Neural Networks
+15, What Are the Different Layers on CNN,Data Science,"Knowledge of Convolutional Neural Networks,Understanding of CNN architecture",Understanding of CNN architecture
+16, What makes CNNs translation invariant,Data Science,"Understanding of Convolutional Neural Networks, Knowledge of CNN architectures, Understanding of translation invariance",Understanding of Convolutional Neural Networks
+16, What makes CNNs translation invariant,Data Science,"Understanding of Convolutional Neural Networks, Knowledge of CNN architectures, Understanding of translation invariance", Knowledge of CNN architectures
+16, What makes CNNs translation invariant,Data Science,"Understanding of Convolutional Neural Networks, Knowledge of CNN architectures, Understanding of translation invariance", Understanding of translation invariance
+17, How is fastText different from wordvec,Data Science,"Knowledge of word embeddings, understanding of NLP models",Knowledge of word embeddings
+17, How is fastText different from wordvec,Data Science,"Knowledge of word embeddings, understanding of NLP models", understanding of NLP models
+18, Explain Generative Adversarial Network,Data Science,"Knowledge of GANs,  Explanation skills,  Understanding of complex concepts",Knowledge of GANs
+18, Explain Generative Adversarial Network,Data Science,"Knowledge of GANs,  Explanation skills,  Understanding of complex concepts",  Explanation skills
+18, Explain Generative Adversarial Network,Data Science,"Knowledge of GANs,  Explanation skills,  Understanding of complex concepts",  Understanding of complex concepts
+19, What is backward and forward propagation,Data Science,"Understanding of neural networks,Knowledge of backpropagation algorithm,Knowledge of forward propagation",Understanding of neural networks
+19, What is backward and forward propagation,Data Science,"Understanding of neural networks,Knowledge of backpropagation algorithm,Knowledge of forward propagation",Knowledge of backpropagation algorithm
+19, What is backward and forward propagation,Data Science,"Understanding of neural networks,Knowledge of backpropagation algorithm,Knowledge of forward propagation",Knowledge of forward propagation
+20, What are Syntactic and Semantic Analysis,Data Science,"Knowledge of programming language concepts,Understanding of compiler design",Knowledge of programming language concepts
+20, What are Syntactic and Semantic Analysis,Data Science,"Knowledge of programming language concepts,Understanding of compiler design",Understanding of compiler design
+21, What is a local optimumWhat is a local optimum,Data Science,"Understanding of optimization concepts,Knowledge of local vs. global optima",Understanding of optimization concepts
+21, What is a local optimumWhat is a local optimum,Data Science,"Understanding of optimization concepts,Knowledge of local vs. global optima",Knowledge of local vs. global optima
+22, Explain gates used in LSTM with their functions,Data Science,"Understanding of LSTM architecture, knowledge of gate mechanisms, explanation skills",Understanding of LSTM architecture
+22, Explain gates used in LSTM with their functions,Data Science,"Understanding of LSTM architecture, knowledge of gate mechanisms, explanation skills", knowledge of gate mechanisms
+22, Explain gates used in LSTM with their functions,Data Science,"Understanding of LSTM architecture, knowledge of gate mechanisms, explanation skills", explanation skills
+23, What is ReLU How is it better than sigmoid or tanh,Data Science,"Knowledge of neural networks, understanding of activation functions, comparative analysis",Knowledge of neural networks
+23, What is ReLU How is it better than sigmoid or tanh,Data Science,"Knowledge of neural networks, understanding of activation functions, comparative analysis", understanding of activation functions
+23, What is ReLU How is it better than sigmoid or tanh,Data Science,"Knowledge of neural networks, understanding of activation functions, comparative analysis", comparative analysis
+24, What is transfer learning have you used it before,Data Science,"Experience,Knowledge application",Experience
+24, What is transfer learning have you used it before,Data Science,"Experience,Knowledge application",Knowledge application
+25, What is multi-task learning When should it be used,Data Science,"Knowledge comprehension, application",Knowledge comprehension
+25, What is multi-task learning When should it be used,Data Science,"Knowledge comprehension, application", application
+26, Difference between convex and non-convex cost function,Data Science,"Understanding of optimization concepts,Knowledge of cost functions,Ability to compare and contrast",Understanding of optimization concepts
+26, Difference between convex and non-convex cost function,Data Science,"Understanding of optimization concepts,Knowledge of cost functions,Ability to compare and contrast",Knowledge of cost functions
+26, Difference between convex and non-convex cost function,Data Science,"Understanding of optimization concepts,Knowledge of cost functions,Ability to compare and contrast",Ability to compare and contrast
+27, Why do we remove stop words When do we not remove them,Data Science,"Information retrieval, natural language processing, text processing, understanding of NLP techniques, critical thinking",Information retrieval
+27, Why do we remove stop words When do we not remove them,Data Science,"Information retrieval, natural language processing, text processing, understanding of NLP techniques, critical thinking", natural language processing
+27, Why do we remove stop words When do we not remove them,Data Science,"Information retrieval, natural language processing, text processing, understanding of NLP techniques, critical thinking", text processing
+27, Why do we remove stop words When do we not remove them,Data Science,"Information retrieval, natural language processing, text processing, understanding of NLP techniques, critical thinking", understanding of NLP techniques
+27, Why do we remove stop words When do we not remove them,Data Science,"Information retrieval, natural language processing, text processing, understanding of NLP techniques, critical thinking", critical thinking
+28, Explain the difference between an epoch a batch and an iteration,Data Science,"Understanding of machine learning terminology, comprehension, explanation skills",Understanding of machine learning terminology
+28, Explain the difference between an epoch a batch and an iteration,Data Science,"Understanding of machine learning terminology, comprehension, explanation skills", comprehension
+28, Explain the difference between an epoch a batch and an iteration,Data Science,"Understanding of machine learning terminology, comprehension, explanation skills", explanation skills
+29, What is the difference between NLP and NLU,Data Science,"Knowledge of NLP, Knowledge of NLU, Comparative analysis",Knowledge of NLP
+29, What is the difference between NLP and NLU,Data Science,"Knowledge of NLP, Knowledge of NLU, Comparative analysis", Knowledge of NLU
+29, What is the difference between NLP and NLU,Data Science,"Knowledge of NLP, Knowledge of NLU, Comparative analysis", Comparative analysis
+30, For online learning which one would you prefer SGD or Adagrad and why,Data Science,"Machine learning algorithm selection, understanding of optimization algorithms, comparative analysis, justification/reasoning",Machine learning algorithm selection
+30, For online learning which one would you prefer SGD or Adagrad and why,Data Science,"Machine learning algorithm selection, understanding of optimization algorithms, comparative analysis, justification/reasoning", understanding of optimization algorithms
+30, For online learning which one would you prefer SGD or Adagrad and why,Data Science,"Machine learning algorithm selection, understanding of optimization algorithms, comparative analysis, justification/reasoning", comparative analysis
+30, For online learning which one would you prefer SGD or Adagrad and why,Data Science,"Machine learning algorithm selection, understanding of optimization algorithms, comparative analysis, justification/reasoning", justification/reasoning
+31, What Is a Multi-layer Perceptron MLPWhat Is a Multi-layer Perceptron MLP,Data Science,"Knowledge of neural networks, understanding of MLP architecture",Knowledge of neural networks
+31, What Is a Multi-layer Perceptron MLPWhat Is a Multi-layer Perceptron MLP,Data Science,"Knowledge of neural networks, understanding of MLP architecture", understanding of MLP architecture
+32, Is it always bad to have local optimaIs it always bad to have local optima,Data Science,"Critical thinking, Problem-solving, Analytical skills",Critical thinking
+32, Is it always bad to have local optimaIs it always bad to have local optima,Data Science,"Critical thinking, Problem-solving, Analytical skills", Problem-solving
+32, Is it always bad to have local optimaIs it always bad to have local optima,Data Science,"Critical thinking, Problem-solving, Analytical skills", Analytical skills
+33," In node2vec, what does embedding represent topological similarity or nearness",Data Science,"Understanding of node2vec, Graph Embedding",Understanding of node2vec
+33," In node2vec, what does embedding represent topological similarity or nearness",Data Science,"Understanding of node2vec, Graph Embedding", Graph Embedding
+34, What do you understand by Boltzmann Machine and Restricted Boltzmann Machines,Data Science,"Knowledge of Boltzmann Machines, Knowledge of Restricted Boltzmann Machines, Understanding of Machine Learning concepts",Knowledge of Boltzmann Machines
+34, What do you understand by Boltzmann Machine and Restricted Boltzmann Machines,Data Science,"Knowledge of Boltzmann Machines, Knowledge of Restricted Boltzmann Machines, Understanding of Machine Learning concepts", Knowledge of Restricted Boltzmann Machines
+34, What do you understand by Boltzmann Machine and Restricted Boltzmann Machines,Data Science,"Knowledge of Boltzmann Machines, Knowledge of Restricted Boltzmann Machines, Understanding of Machine Learning concepts", Understanding of Machine Learning concepts
+35, How to compute an inverse matrix faster by playing around with some computational tricks,Data Science,"Linear algebra,Matrix operations,Computational efficiency,Algorithm optimization",Linear algebra
+35, How to compute an inverse matrix faster by playing around with some computational tricks,Data Science,"Linear algebra,Matrix operations,Computational efficiency,Algorithm optimization",Matrix operations
+35, How to compute an inverse matrix faster by playing around with some computational tricks,Data Science,"Linear algebra,Matrix operations,Computational efficiency,Algorithm optimization",Computational efficiency
+35, How to compute an inverse matrix faster by playing around with some computational tricks,Data Science,"Linear algebra,Matrix operations,Computational efficiency,Algorithm optimization",Algorithm optimization
+36, For infrequent/rare words which among CBOW and SkipGram should be used for wordvec training,Data Science,"Understanding of word embedding techniques,Knowledge of CBOW and Skip-gram models,Ability to compare and contrast machine learning algorithms",Understanding of word embedding techniques
+36, For infrequent/rare words which among CBOW and SkipGram should be used for wordvec training,Data Science,"Understanding of word embedding techniques,Knowledge of CBOW and Skip-gram models,Ability to compare and contrast machine learning algorithms",Knowledge of CBOW and Skip-gram models
+36, For infrequent/rare words which among CBOW and SkipGram should be used for wordvec training,Data Science,"Understanding of word embedding techniques,Knowledge of CBOW and Skip-gram models,Ability to compare and contrast machine learning algorithms",Ability to compare and contrast machine learning algorithms
+37, What is pooling in CNN Why do we need it,Data Science,"Understanding of Convolutional Neural Networks (CNNs), Knowledge of pooling layers in CNNs, Comprehension of the purpose of pooling in CNNs",Understanding of Convolutional Neural Networks (CNNs)
+37, What is pooling in CNN Why do we need it,Data Science,"Understanding of Convolutional Neural Networks (CNNs), Knowledge of pooling layers in CNNs, Comprehension of the purpose of pooling in CNNs", Knowledge of pooling layers in CNNs
+37, What is pooling in CNN Why do we need it,Data Science,"Understanding of Convolutional Neural Networks (CNNs), Knowledge of pooling layers in CNNs, Comprehension of the purpose of pooling in CNNs", Comprehension of the purpose of pooling in CNNs
+38, Describe the structure of Artificial Neural Networks & RNN(recurrent neural network),Data Science,"Knowledge of neural networks,Knowledge of RNNs,Descriptive writing",Knowledge of neural networks
+38, Describe the structure of Artificial Neural Networks & RNN(recurrent neural network),Data Science,"Knowledge of neural networks,Knowledge of RNNs,Descriptive writing",Knowledge of RNNs
+38, Describe the structure of Artificial Neural Networks & RNN(recurrent neural network),Data Science,"Knowledge of neural networks,Knowledge of RNNs,Descriptive writing",Descriptive writing
+39, How to Select a Batch Size Will selecting a batch size produce better or worse results?,Data Science,"Problem-solving, critical thinking, understanding of machine learning concepts",Problem-solving
+39, How to Select a Batch Size Will selecting a batch size produce better or worse results?,Data Science,"Problem-solving, critical thinking, understanding of machine learning concepts", critical thinking
+39, How to Select a Batch Size Will selecting a batch size produce better or worse results?,Data Science,"Problem-solving, critical thinking, understanding of machine learning concepts", understanding of machine learning concepts
+40, What are N-grams How can we use them,Data Science,"Understanding of NLP concepts,Text analysis,Natural language processing",Understanding of NLP concepts
+40, What are N-grams How can we use them,Data Science,"Understanding of NLP concepts,Text analysis,Natural language processing",Text analysis
+40, What are N-grams How can we use them,Data Science,"Understanding of NLP concepts,Text analysis,Natural language processing",Natural language processing
+41, How large should be N for our bag of words when using N-grams,Data Science,"Problem-solving,Critical thinking,Understanding of N-grams,NLP fundamentals",Problem-solving
+41, How large should be N for our bag of words when using N-grams,Data Science,"Problem-solving,Critical thinking,Understanding of N-grams,NLP fundamentals",Critical thinking
+41, How large should be N for our bag of words when using N-grams,Data Science,"Problem-solving,Critical thinking,Understanding of N-grams,NLP fundamentals",Understanding of N-grams
+41, How large should be N for our bag of words when using N-grams,Data Science,"Problem-solving,Critical thinking,Understanding of N-grams,NLP fundamentals",NLP fundamentals
+42, How can you use neural nets for text classification and computer vision,Data Science,"Understanding of neural networks,Knowledge of text classification,Knowledge of computer vision",Understanding of neural networks
+42, How can you use neural nets for text classification and computer vision,Data Science,"Understanding of neural networks,Knowledge of text classification,Knowledge of computer vision",Knowledge of text classification
+42, How can you use neural nets for text classification and computer vision,Data Science,"Understanding of neural networks,Knowledge of text classification,Knowledge of computer vision",Knowledge of computer vision
+43, Do gradient descent methods always converge at the same point,Data Science,"Understanding of gradient descent, analytical thinking, knowledge of optimization algorithms",Understanding of gradient descent
+43, Do gradient descent methods always converge at the same point,Data Science,"Understanding of gradient descent, analytical thinking, knowledge of optimization algorithms", analytical thinking
+43, Do gradient descent methods always converge at the same point,Data Science,"Understanding of gradient descent, analytical thinking, knowledge of optimization algorithms", knowledge of optimization algorithms
+44, What is gradient descent How does it work,Data Science,"Understanding of algorithms,Knowledge of optimization techniques",Understanding of algorithms
+44, What is gradient descent How does it work,Data Science,"Understanding of algorithms,Knowledge of optimization techniques",Knowledge of optimization techniques
+45, What are autoencoders Explain the different layers of autoencoders and mention three practical usages of them,Data Science,"Knowledge of autoencoders, Understanding of autoencoder architecture, Application of autoencoders",Knowledge of autoencoders
+45, What are autoencoders Explain the different layers of autoencoders and mention three practical usages of them,Data Science,"Knowledge of autoencoders, Understanding of autoencoder architecture, Application of autoencoders", Understanding of autoencoder architecture
+45, What are autoencoders Explain the different layers of autoencoders and mention three practical usages of them,Data Science,"Knowledge of autoencoders, Understanding of autoencoder architecture, Application of autoencoders", Application of autoencoders
+46, What is vanishing gradient descent,Data Science,"Knowledge of deep learning concepts, understanding of gradient descent algorithms",Knowledge of deep learning concepts
+46, What is vanishing gradient descent,Data Science,"Knowledge of deep learning concepts, understanding of gradient descent algorithms", understanding of gradient descent algorithms
+47, difference between Vanishing gradient Vs Exploding gradient,Data Science,"Understanding of deep learning concepts,Knowledge of gradient descent,Problem-solving",Understanding of deep learning concepts
+47, difference between Vanishing gradient Vs Exploding gradient,Data Science,"Understanding of deep learning concepts,Knowledge of gradient descent,Problem-solving",Knowledge of gradient descent
+47, difference between Vanishing gradient Vs Exploding gradient,Data Science,"Understanding of deep learning concepts,Knowledge of gradient descent,Problem-solving",Problem-solving
+48, How to handle dying node problems in case of ReLU activation function,Data Science,"Understanding of neural networks,Debugging,Troubleshooting,Knowledge of activation functions",Understanding of neural networks
+48, How to handle dying node problems in case of ReLU activation function,Data Science,"Understanding of neural networks,Debugging,Troubleshooting,Knowledge of activation functions",Debugging
+48, How to handle dying node problems in case of ReLU activation function,Data Science,"Understanding of neural networks,Debugging,Troubleshooting,Knowledge of activation functions",Troubleshooting
+48, How to handle dying node problems in case of ReLU activation function,Data Science,"Understanding of neural networks,Debugging,Troubleshooting,Knowledge of activation functions",Knowledge of activation functions
+49, What is the use of the leaky ReLU function,Data Science,"Knowledge of neural networks, understanding of activation functions",Knowledge of neural networks
+49, What is the use of the leaky ReLU function,Data Science,"Knowledge of neural networks, understanding of activation functions", understanding of activation functions
+50, What are the different Deep Learning Frameworks,Data Science,Knowledge of Deep Learning Frameworks,Knowledge of Deep Learning Frameworks
+51, What is the difference between machine learning and deep learning,Data Science,"Knowledge of machine learning,Knowledge of deep learning,Understanding of fundamental differences between ML and DL",Knowledge of machine learning
+51, What is the difference between machine learning and deep learning,Data Science,"Knowledge of machine learning,Knowledge of deep learning,Understanding of fundamental differences between ML and DL",Knowledge of deep learning
+51, What is the difference between machine learning and deep learning,Data Science,"Knowledge of machine learning,Knowledge of deep learning,Understanding of fundamental differences between ML and DL",Understanding of fundamental differences between ML and DL
+52, What is a dropout layer and how does it help a neural network,Data Science,"Understanding of neural networks,Knowledge of regularization techniques",Understanding of neural networks
+52, What is a dropout layer and how does it help a neural network,Data Science,"Understanding of neural networks,Knowledge of regularization techniques",Knowledge of regularization techniques
+53, Explain why dropout in a neural network acts as a regularizer,Data Science,"Understanding of neural networks,Regularization techniques,Understanding of overfitting",Understanding of neural networks
+53, Explain why dropout in a neural network acts as a regularizer,Data Science,"Understanding of neural networks,Regularization techniques,Understanding of overfitting",Regularization techniques
+53, Explain why dropout in a neural network acts as a regularizer,Data Science,"Understanding of neural networks,Regularization techniques,Understanding of overfitting",Understanding of overfitting
+54, How to know whether your model is suffering from the problem of Exploding Gradients,Data Science,"Understanding of neural network training, diagnosis of training problems, debugging",Understanding of neural network training
+54, How to know whether your model is suffering from the problem of Exploding Gradients,Data Science,"Understanding of neural network training, diagnosis of training problems, debugging", diagnosis of training problems
+54, How to know whether your model is suffering from the problem of Exploding Gradients,Data Science,"Understanding of neural network training, diagnosis of training problems, debugging", debugging
+55, How to handle exploding gradient problem,Data Science,"Deep learning,Gradient descent optimization,Debugging,Problem-solving",Deep learning
+55, How to handle exploding gradient problem,Data Science,"Deep learning,Gradient descent optimization,Debugging,Problem-solving",Gradient descent optimization
+55, How to handle exploding gradient problem,Data Science,"Deep learning,Gradient descent optimization,Debugging,Problem-solving",Debugging
+55, How to handle exploding gradient problem,Data Science,"Deep learning,Gradient descent optimization,Debugging,Problem-solving",Problem-solving
+56, How Does an LSTM Network Work,Data Science,"Understanding of neural networks,Understanding of recurrent neural networks,Understanding of LSTM architecture,Knowledge of sequence modeling",Understanding of neural networks
+56, How Does an LSTM Network Work,Data Science,"Understanding of neural networks,Understanding of recurrent neural networks,Understanding of LSTM architecture,Knowledge of sequence modeling",Understanding of recurrent neural networks
+56, How Does an LSTM Network Work,Data Science,"Understanding of neural networks,Understanding of recurrent neural networks,Understanding of LSTM architecture,Knowledge of sequence modeling",Understanding of LSTM architecture
+56, How Does an LSTM Network Work,Data Science,"Understanding of neural networks,Understanding of recurrent neural networks,Understanding of LSTM architecture,Knowledge of sequence modeling",Knowledge of sequence modeling
+57, What problem does Bi-LSTM solve instead of only LSTM,Data Science,"Understanding of LSTMs, Understanding of Bi-LSTMs, Comparative analysis,  Problem-solving",Understanding of LSTMs
+57, What problem does Bi-LSTM solve instead of only LSTM,Data Science,"Understanding of LSTMs, Understanding of Bi-LSTMs, Comparative analysis,  Problem-solving", Understanding of Bi-LSTMs
+57, What problem does Bi-LSTM solve instead of only LSTM,Data Science,"Understanding of LSTMs, Understanding of Bi-LSTMs, Comparative analysis,  Problem-solving", Comparative analysis
+57, What problem does Bi-LSTM solve instead of only LSTM,Data Science,"Understanding of LSTMs, Understanding of Bi-LSTMs, Comparative analysis,  Problem-solving",  Problem-solving
+58, What is the difference between LSTM and GRU,Data Science,"Knowledge of deep learning architectures, understanding of recurrent neural networks",Knowledge of deep learning architectures
+58, What is the difference between LSTM and GRU,Data Science,"Knowledge of deep learning architectures, understanding of recurrent neural networks", understanding of recurrent neural networks
+59, What happens to the predictions of a CNN if an image is rotated,Data Science,"Understanding of CNNs, Image Rotation Invariance,  Spatial Reasoning",Understanding of CNNs
+59, What happens to the predictions of a CNN if an image is rotated,Data Science,"Understanding of CNNs, Image Rotation Invariance,  Spatial Reasoning", Image Rotation Invariance
+59, What happens to the predictions of a CNN if an image is rotated,Data Science,"Understanding of CNNs, Image Rotation Invariance,  Spatial Reasoning",  Spatial Reasoning
+60, How does CNN help in translation and rotation invariance of images,Data Science,"Understanding of Convolutional Neural Networks (CNNs), image processing, translation invariance, rotation invariance",Understanding of Convolutional Neural Networks (CNNs)
+60, How does CNN help in translation and rotation invariance of images,Data Science,"Understanding of Convolutional Neural Networks (CNNs), image processing, translation invariance, rotation invariance", image processing
+60, How does CNN help in translation and rotation invariance of images,Data Science,"Understanding of Convolutional Neural Networks (CNNs), image processing, translation invariance, rotation invariance", translation invariance
+60, How does CNN help in translation and rotation invariance of images,Data Science,"Understanding of Convolutional Neural Networks (CNNs), image processing, translation invariance, rotation invariance", rotation invariance
+61, Define Term Freuency & Inverse Document Freuency Tf-idf and how to use it for converting text to vector,Data Science,"Definition skills,Understanding of TF-IDF,Text vectorization",Definition skills
+61, Define Term Freuency & Inverse Document Freuency Tf-idf and how to use it for converting text to vector,Data Science,"Definition skills,Understanding of TF-IDF,Text vectorization",Understanding of TF-IDF
+61, Define Term Freuency & Inverse Document Freuency Tf-idf and how to use it for converting text to vector,Data Science,"Definition skills,Understanding of TF-IDF,Text vectorization",Text vectorization
+62, What are three primary convolutional neural network layers How are they commonly put together,Data Science,"Knowledge of convolutional neural networks, understanding of CNN architecture",Knowledge of convolutional neural networks
+62, What are three primary convolutional neural network layers How are they commonly put together,Data Science,"Knowledge of convolutional neural networks, understanding of CNN architecture", understanding of CNN architecture
+63, Describe the architecture of a typical Convolutional Neural Network,Data Science,"Knowledge of CNN architecture, understanding of convolutional layers, understanding of pooling layers, understanding of fully connected layers, ability to explain neural network concepts",Knowledge of CNN architecture
+63, Describe the architecture of a typical Convolutional Neural Network,Data Science,"Knowledge of CNN architecture, understanding of convolutional layers, understanding of pooling layers, understanding of fully connected layers, ability to explain neural network concepts", understanding of convolutional layers
+63, Describe the architecture of a typical Convolutional Neural Network,Data Science,"Knowledge of CNN architecture, understanding of convolutional layers, understanding of pooling layers, understanding of fully connected layers, ability to explain neural network concepts", understanding of pooling layers
+63, Describe the architecture of a typical Convolutional Neural Network,Data Science,"Knowledge of CNN architecture, understanding of convolutional layers, understanding of pooling layers, understanding of fully connected layers, ability to explain neural network concepts", understanding of fully connected layers
+63, Describe the architecture of a typical Convolutional Neural Network,Data Science,"Knowledge of CNN architecture, understanding of convolutional layers, understanding of pooling layers, understanding of fully connected layers, ability to explain neural network concepts", ability to explain neural network concepts
+64," What do you mean by Dropout and Batch Normalization, When and why use",Data Science,"Deep learning knowledge, understanding of regularization techniques, understanding of normalization techniques",Deep learning knowledge
+64," What do you mean by Dropout and Batch Normalization, When and why use",Data Science,"Deep learning knowledge, understanding of regularization techniques, understanding of normalization techniques", understanding of regularization techniques
+64," What do you mean by Dropout and Batch Normalization, When and why use",Data Science,"Deep learning knowledge, understanding of regularization techniques, understanding of normalization techniques", understanding of normalization techniques
+65, What is the difference between online and batch learning,Data Science,"Machine learning concepts,Understanding of different learning paradigms",Machine learning concepts
+65, What is the difference between online and batch learning,Data Science,"Machine learning concepts,Understanding of different learning paradigms",Understanding of different learning paradigms
+66, Is dropout used on the test set,Data Science,"Understanding of machine learning terminology,Knowledge of model evaluation",Understanding of machine learning terminology
+66, Is dropout used on the test set,Data Science,"Understanding of machine learning terminology,Knowledge of model evaluation",Knowledge of model evaluation
+67, What is an activation function and discuss the use of an activation function,Data Science,"Understanding of neural networks,Knowledge of activation functions,Explanatory skills",Understanding of neural networks
+67, What is an activation function and discuss the use of an activation function,Data Science,"Understanding of neural networks,Knowledge of activation functions,Explanatory skills",Knowledge of activation functions
+67, What is an activation function and discuss the use of an activation function,Data Science,"Understanding of neural networks,Knowledge of activation functions,Explanatory skills",Explanatory skills
+68, Explain three different types of activation functions,Data Science,"Knowledge of activation functions, Understanding of neural networks, Explanatory skills",Knowledge of activation functions
+68, Explain three different types of activation functions,Data Science,"Knowledge of activation functions, Understanding of neural networks, Explanatory skills", Understanding of neural networks
+68, Explain three different types of activation functions,Data Science,"Knowledge of activation functions, Understanding of neural networks, Explanatory skills", Explanatory skills
+69, What is the range of activation functions,Data Science,"Knowledge of activation functions, Understanding of neural networks",Knowledge of activation functions
+69, What is the range of activation functions,Data Science,"Knowledge of activation functions, Understanding of neural networks", Understanding of neural networks
+70, Why is Rectified Linear Unit a good activation function,Data Science,"Understanding of activation functions,Knowledge of neural networks,Comparative analysis,Problem-solving",Understanding of activation functions
+70, Why is Rectified Linear Unit a good activation function,Data Science,"Understanding of activation functions,Knowledge of neural networks,Comparative analysis,Problem-solving",Knowledge of neural networks
+70, Why is Rectified Linear Unit a good activation function,Data Science,"Understanding of activation functions,Knowledge of neural networks,Comparative analysis,Problem-solving",Comparative analysis
+70, Why is Rectified Linear Unit a good activation function,Data Science,"Understanding of activation functions,Knowledge of neural networks,Comparative analysis,Problem-solving",Problem-solving
+71, Why don't we use the Relu activation function in the output layer,Data Science,"Understanding of neural networks,Understanding of activation functions,Problem-solving,Critical thinking",Understanding of neural networks
+71, Why don't we use the Relu activation function in the output layer,Data Science,"Understanding of neural networks,Understanding of activation functions,Problem-solving,Critical thinking",Understanding of activation functions
+71, Why don't we use the Relu activation function in the output layer,Data Science,"Understanding of neural networks,Understanding of activation functions,Problem-solving,Critical thinking",Problem-solving
+71, Why don't we use the Relu activation function in the output layer,Data Science,"Understanding of neural networks,Understanding of activation functions,Problem-solving,Critical thinking",Critical thinking
+72, What can go wrong if we use a linear activation instead of ReLU,Data Science,"Understanding of neural networks,activation functions,non-linearity",Understanding of neural networks
+72, What can go wrong if we use a linear activation instead of ReLU,Data Science,"Understanding of neural networks,activation functions,non-linearity",activation functions
+72, What can go wrong if we use a linear activation instead of ReLU,Data Science,"Understanding of neural networks,activation functions,non-linearity",non-linearity
+73," Give examples in which a many-to-one RNN architecture is appropriate, Give examples in which a many-to-one RNN architecture is appropriate",Data Science,"Understanding of RNN architectures, Application of RNN architectures",Understanding of RNN architectures
+73," Give examples in which a many-to-one RNN architecture is appropriate, Give examples in which a many-to-one RNN architecture is appropriate",Data Science,"Understanding of RNN architectures, Application of RNN architectures", Application of RNN architectures
+74, What is RNN and How does an RNN work,Data Science,"Knowledge of RNNs, understanding of RNN architecture",Knowledge of RNNs
+74, What is RNN and How does an RNN work,Data Science,"Knowledge of RNNs, understanding of RNN architecture", understanding of RNN architecture
+75, Why Sigmoid or Tanh is not preferred to be used as the activation function in the hidden layer of the neural network,Data Science,"Understanding of neural networks,Activation functions,Deep learning",Understanding of neural networks
+75, Why Sigmoid or Tanh is not preferred to be used as the activation function in the hidden layer of the neural network,Data Science,"Understanding of neural networks,Activation functions,Deep learning",Activation functions
+75, Why Sigmoid or Tanh is not preferred to be used as the activation function in the hidden layer of the neural network,Data Science,"Understanding of neural networks,Activation functions,Deep learning",Deep learning
+76," difference between various Activation functions such as Sigmoid , tanh, Softmax, ReLU, Leaky ReLU",Data Science,"Knowledge of activation functions, understanding of neural networks",Knowledge of activation functions
+76," difference between various Activation functions such as Sigmoid , tanh, Softmax, ReLU, Leaky ReLU",Data Science,"Knowledge of activation functions, understanding of neural networks", understanding of neural networks
+77, Why Tanh activation function preferred over sigmoid,Data Science,"Understanding of activation functions, comparative analysis, reasoning",Understanding of activation functions
+77, Why Tanh activation function preferred over sigmoid,Data Science,"Understanding of activation functions, comparative analysis, reasoning", comparative analysis
+77, Why Tanh activation function preferred over sigmoid,Data Science,"Understanding of activation functions, comparative analysis, reasoning", reasoning
+78, What are word embeddings Why are they useful,Data Science,"Understanding of word embeddings, Knowledge of NLP concepts",Understanding of word embeddings
+78, What are word embeddings Why are they useful,Data Science,"Understanding of word embeddings, Knowledge of NLP concepts", Knowledge of NLP concepts
+79, what is WordVec,Data Science,"Knowledge of NLP terminology,Vocabulary of machine learning",Knowledge of NLP terminology
+79, what is WordVec,Data Science,"Knowledge of NLP terminology,Vocabulary of machine learning",Vocabulary of machine learning
+80, What are some advantages of using character embeddings instead of word embeddings,Data Science,"Understanding of NLP concepts,Knowledge of word embeddings,Knowledge of character embeddings,Comparative analysis,Critical thinking",Understanding of NLP concepts
+80, What are some advantages of using character embeddings instead of word embeddings,Data Science,"Understanding of NLP concepts,Knowledge of word embeddings,Knowledge of character embeddings,Comparative analysis,Critical thinking",Knowledge of word embeddings
+80, What are some advantages of using character embeddings instead of word embeddings,Data Science,"Understanding of NLP concepts,Knowledge of word embeddings,Knowledge of character embeddings,Comparative analysis,Critical thinking",Knowledge of character embeddings
+80, What are some advantages of using character embeddings instead of word embeddings,Data Science,"Understanding of NLP concepts,Knowledge of word embeddings,Knowledge of character embeddings,Comparative analysis,Critical thinking",Comparative analysis
+80, What are some advantages of using character embeddings instead of word embeddings,Data Science,"Understanding of NLP concepts,Knowledge of word embeddings,Knowledge of character embeddings,Comparative analysis,Critical thinking",Critical thinking
+81," How do you get sentence meanings from word embeddings, considering the position of words in the sentence",Data Science,"Natural Language Processing,Word Embeddings,Contextual Understanding,Sentence Embedding,Semantic Analysis",Natural Language Processing
+81," How do you get sentence meanings from word embeddings, considering the position of words in the sentence",Data Science,"Natural Language Processing,Word Embeddings,Contextual Understanding,Sentence Embedding,Semantic Analysis",Word Embeddings
+81," How do you get sentence meanings from word embeddings, considering the position of words in the sentence",Data Science,"Natural Language Processing,Word Embeddings,Contextual Understanding,Sentence Embedding,Semantic Analysis",Contextual Understanding
+81," How do you get sentence meanings from word embeddings, considering the position of words in the sentence",Data Science,"Natural Language Processing,Word Embeddings,Contextual Understanding,Sentence Embedding,Semantic Analysis",Sentence Embedding
+81," How do you get sentence meanings from word embeddings, considering the position of words in the sentence",Data Science,"Natural Language Processing,Word Embeddings,Contextual Understanding,Sentence Embedding,Semantic Analysis",Semantic Analysis
+82, Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words,Data Science,"Machine learning model selection,Model understanding,Text classification",Machine learning model selection
+82, Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words,Data Science,"Machine learning model selection,Model understanding,Text classification",Model understanding
+82, Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words,Data Science,"Machine learning model selection,Model understanding,Text classification",Text classification
+83, What is bag of words How we can use it for text vectorization,Data Science,"Understanding of NLP concepts,Text vectorization techniques",Understanding of NLP concepts
+83, What is bag of words How we can use it for text vectorization,Data Science,"Understanding of NLP concepts,Text vectorization techniques",Text vectorization techniques
+84, What are the advantages and disadvantages of bag of words,Data Science,"Analysis, Comparison, Critical Thinking, Summarization",Analysis
+84, What are the advantages and disadvantages of bag of words,Data Science,"Analysis, Comparison, Critical Thinking, Summarization", Comparison
+84, What are the advantages and disadvantages of bag of words,Data Science,"Analysis, Comparison, Critical Thinking, Summarization", Critical Thinking
+84, What are the advantages and disadvantages of bag of words,Data Science,"Analysis, Comparison, Critical Thinking, Summarization", Summarization
+85, What is the main difference between Adam and SGD,Data Science,"Knowledge of optimization algorithms, understanding of gradient descent, comparison of algorithms",Knowledge of optimization algorithms
+85, What is the main difference between Adam and SGD,Data Science,"Knowledge of optimization algorithms, understanding of gradient descent, comparison of algorithms", understanding of gradient descent
+85, What is the main difference between Adam and SGD,Data Science,"Knowledge of optimization algorithms, understanding of gradient descent, comparison of algorithms", comparison of algorithms
+86, What are the advantages and disadvantages of SGD over gradient descent,Data Science,"Understanding of optimization algorithms, comparative analysis, critical thinking",Understanding of optimization algorithms
+86, What are the advantages and disadvantages of SGD over gradient descent,Data Science,"Understanding of optimization algorithms, comparative analysis, critical thinking", comparative analysis
+86, What are the advantages and disadvantages of SGD over gradient descent,Data Science,"Understanding of optimization algorithms, comparative analysis, critical thinking", critical thinking
+87," What is the difference between stochastic gradient descent SGD and gradient descent GD, Batch gradient descent, Stochastic gradient descent, Mini-batch gradient descent , what are the pros and cons for each of them",Data Science,"Knowledge of machine learning algorithms, understanding of gradient descent variants, comparative analysis, pros and cons analysis",Knowledge of machine learning algorithms
+87," What is the difference between stochastic gradient descent SGD and gradient descent GD, Batch gradient descent, Stochastic gradient descent, Mini-batch gradient descent , what are the pros and cons for each of them",Data Science,"Knowledge of machine learning algorithms, understanding of gradient descent variants, comparative analysis, pros and cons analysis", understanding of gradient descent variants
+87," What is the difference between stochastic gradient descent SGD and gradient descent GD, Batch gradient descent, Stochastic gradient descent, Mini-batch gradient descent , what are the pros and cons for each of them",Data Science,"Knowledge of machine learning algorithms, understanding of gradient descent variants, comparative analysis, pros and cons analysis", comparative analysis
+87," What is the difference between stochastic gradient descent SGD and gradient descent GD, Batch gradient descent, Stochastic gradient descent, Mini-batch gradient descent , what are the pros and cons for each of them",Data Science,"Knowledge of machine learning algorithms, understanding of gradient descent variants, comparative analysis, pros and cons analysis", pros and cons analysis
+88, When would you use GD over SDG and vice-versa,Data Science,"Knowledge of GD and SDG,  understanding of algorithm design principles, comparative analysis",Knowledge of GD and SDG
+88, When would you use GD over SDG and vice-versa,Data Science,"Knowledge of GD and SDG,  understanding of algorithm design principles, comparative analysis",  understanding of algorithm design principles
+88, When would you use GD over SDG and vice-versa,Data Science,"Knowledge of GD and SDG,  understanding of algorithm design principles, comparative analysis", comparative analysis
+89, How would you choose the number of filters and the filter size at each CNN layer,Data Science,"Convolutional Neural Network (CNN) architecture design,Hyperparameter tuning,Understanding of CNN filter mechanisms",Convolutional Neural Network (CNN) architecture design
+89, How would you choose the number of filters and the filter size at each CNN layer,Data Science,"Convolutional Neural Network (CNN) architecture design,Hyperparameter tuning,Understanding of CNN filter mechanisms",Hyperparameter tuning
+89, How would you choose the number of filters and the filter size at each CNN layer,Data Science,"Convolutional Neural Network (CNN) architecture design,Hyperparameter tuning,Understanding of CNN filter mechanisms",Understanding of CNN filter mechanisms
+90, How can we use CNN for text classification,Data Science,"Understanding of CNNs, Text processing, Deep learning fundamentals",Understanding of CNNs
+90, How can we use CNN for text classification,Data Science,"Understanding of CNNs, Text processing, Deep learning fundamentals", Text processing
+90, How can we use CNN for text classification,Data Science,"Understanding of CNNs, Text processing, Deep learning fundamentals", Deep learning fundamentals
+91, What are some advantages in using a CNN (convolutional neural network rather than a DNN (dense neural network in an image classification task,Data Science,"Understanding of CNNs, Understanding of DNNs, Comparative analysis, Knowledge of image classification",Understanding of CNNs
+91, What are some advantages in using a CNN (convolutional neural network rather than a DNN (dense neural network in an image classification task,Data Science,"Understanding of CNNs, Understanding of DNNs, Comparative analysis, Knowledge of image classification", Understanding of DNNs
+91, What are some advantages in using a CNN (convolutional neural network rather than a DNN (dense neural network in an image classification task,Data Science,"Understanding of CNNs, Understanding of DNNs, Comparative analysis, Knowledge of image classification", Comparative analysis
+91, What are some advantages in using a CNN (convolutional neural network rather than a DNN (dense neural network in an image classification task,Data Science,"Understanding of CNNs, Understanding of DNNs, Comparative analysis, Knowledge of image classification", Knowledge of image classification
+92, Describe two ways to visualize features of a CNN in an image classification task,Data Science,"Visualization techniques,Understanding of CNNs,Communication skills",Visualization techniques
+92, Describe two ways to visualize features of a CNN in an image classification task,Data Science,"Visualization techniques,Understanding of CNNs,Communication skills",Understanding of CNNs
+92, Describe two ways to visualize features of a CNN in an image classification task,Data Science,"Visualization techniques,Understanding of CNNs,Communication skills",Communication skills
+93, Why do segmentation CNNs typically have an encoder-decoder style / structure,Data Science,"Understanding of CNN architectures,Knowledge of image segmentation,Understanding of encoder-decoder networks",Understanding of CNN architectures
+93, Why do segmentation CNNs typically have an encoder-decoder style / structure,Data Science,"Understanding of CNN architectures,Knowledge of image segmentation,Understanding of encoder-decoder networks",Knowledge of image segmentation
+93, Why do segmentation CNNs typically have an encoder-decoder style / structure,Data Science,"Understanding of CNN architectures,Knowledge of image segmentation,Understanding of encoder-decoder networks",Understanding of encoder-decoder networks
+94, What is a convolutional layer & Why do we actually need convolutions Can we use fully-connected layers for that,Data Science,"Understanding of convolutional neural networks, knowledge of image processing, understanding of fully connected layers, comparative analysis",Understanding of convolutional neural networks
+94, What is a convolutional layer & Why do we actually need convolutions Can we use fully-connected layers for that,Data Science,"Understanding of convolutional neural networks, knowledge of image processing, understanding of fully connected layers, comparative analysis", knowledge of image processing
+94, What is a convolutional layer & Why do we actually need convolutions Can we use fully-connected layers for that,Data Science,"Understanding of convolutional neural networks, knowledge of image processing, understanding of fully connected layers, comparative analysis", understanding of fully connected layers
+94, What is a convolutional layer & Why do we actually need convolutions Can we use fully-connected layers for that,Data Science,"Understanding of convolutional neural networks, knowledge of image processing, understanding of fully connected layers, comparative analysis", comparative analysis
+95, What are the advantages of parameter sharing in case of convolution,Data Science,"Understanding of convolutional neural networks,Understanding of parameter sharing in CNNs,Analytical skills",Understanding of convolutional neural networks
+95, What are the advantages of parameter sharing in case of convolution,Data Science,"Understanding of convolutional neural networks,Understanding of parameter sharing in CNNs,Analytical skills",Understanding of parameter sharing in CNNs
+95, What are the advantages of parameter sharing in case of convolution,Data Science,"Understanding of convolutional neural networks,Understanding of parameter sharing in CNNs,Analytical skills",Analytical skills
+96, Why do we use convolutions for images rather than just Fully Connected layers,Data Science,"Understanding of convolutional neural networks, understanding of fully connected layers, understanding of image data characteristics, comparative analysis, reasoning ability",Understanding of convolutional neural networks
+96, Why do we use convolutions for images rather than just Fully Connected layers,Data Science,"Understanding of convolutional neural networks, understanding of fully connected layers, understanding of image data characteristics, comparative analysis, reasoning ability", understanding of fully connected layers
+96, Why do we use convolutions for images rather than just Fully Connected layers,Data Science,"Understanding of convolutional neural networks, understanding of fully connected layers, understanding of image data characteristics, comparative analysis, reasoning ability", understanding of image data characteristics
+96, Why do we use convolutions for images rather than just Fully Connected layers,Data Science,"Understanding of convolutional neural networks, understanding of fully connected layers, understanding of image data characteristics, comparative analysis, reasoning ability", comparative analysis
+96, Why do we use convolutions for images rather than just Fully Connected layers,Data Science,"Understanding of convolutional neural networks, understanding of fully connected layers, understanding of image data characteristics, comparative analysis, reasoning ability", reasoning ability
+97, Why would you use many small convolutional kernels such as x rather than a few large onesWhy would you use many small convolutional kernels such as x rather than a few large ones,Data Science,"Understanding of convolutional neural networks, understanding of receptive fields, knowledge of computational cost and efficiency, ability to analyze tradeoffs in CNN architecture",Understanding of convolutional neural networks
+97, Why would you use many small convolutional kernels such as x rather than a few large onesWhy would you use many small convolutional kernels such as x rather than a few large ones,Data Science,"Understanding of convolutional neural networks, understanding of receptive fields, knowledge of computational cost and efficiency, ability to analyze tradeoffs in CNN architecture", understanding of receptive fields
+97, Why would you use many small convolutional kernels such as x rather than a few large onesWhy would you use many small convolutional kernels such as x rather than a few large ones,Data Science,"Understanding of convolutional neural networks, understanding of receptive fields, knowledge of computational cost and efficiency, ability to analyze tradeoffs in CNN architecture", knowledge of computational cost and efficiency
+97, Why would you use many small convolutional kernels such as x rather than a few large onesWhy would you use many small convolutional kernels such as x rather than a few large ones,Data Science,"Understanding of convolutional neural networks, understanding of receptive fields, knowledge of computational cost and efficiency, ability to analyze tradeoffs in CNN architecture", ability to analyze tradeoffs in CNN architecture
+98, Why we generally use Softmax non-linearity function as the last operation in-network,Data Science,"Understanding of neural networks,Understanding of activation functions,Knowledge of softmax function,Understanding of classification problems",Understanding of neural networks
+98, Why we generally use Softmax non-linearity function as the last operation in-network,Data Science,"Understanding of neural networks,Understanding of activation functions,Knowledge of softmax function,Understanding of classification problems",Understanding of activation functions
+98, Why we generally use Softmax non-linearity function as the last operation in-network,Data Science,"Understanding of neural networks,Understanding of activation functions,Knowledge of softmax function,Understanding of classification problems",Knowledge of softmax function
+98, Why we generally use Softmax non-linearity function as the last operation in-network,Data Science,"Understanding of neural networks,Understanding of activation functions,Knowledge of softmax function,Understanding of classification problems",Understanding of classification problems
+99, How does BatchNormalization differ in training and inferencing,Data Science,"Understanding of Batch Normalization, Knowledge of Deep Learning,  Understanding of Training and Inference Processes",Understanding of Batch Normalization
+99, How does BatchNormalization differ in training and inferencing,Data Science,"Understanding of Batch Normalization, Knowledge of Deep Learning,  Understanding of Training and Inference Processes", Knowledge of Deep Learning
+99, How does BatchNormalization differ in training and inferencing,Data Science,"Understanding of Batch Normalization, Knowledge of Deep Learning,  Understanding of Training and Inference Processes",  Understanding of Training and Inference Processes
+100, How does batch size affect training of neural networks,Data Science,"Understanding of neural network training, knowledge of hyperparameter tuning,  problem-solving",Understanding of neural network training
+100, How does batch size affect training of neural networks,Data Science,"Understanding of neural network training, knowledge of hyperparameter tuning,  problem-solving", knowledge of hyperparameter tuning
+100, How does batch size affect training of neural networks,Data Science,"Understanding of neural network training, knowledge of hyperparameter tuning,  problem-solving",  problem-solving
+101," When using mini batch gradient descent, why is it important to shuffle the data",Data Science,"Understanding of mini-batch gradient descent, understanding of data shuffling, ability to explain the rationale behind a machine learning technique",Understanding of mini-batch gradient descent
+101," When using mini batch gradient descent, why is it important to shuffle the data",Data Science,"Understanding of mini-batch gradient descent, understanding of data shuffling, ability to explain the rationale behind a machine learning technique", understanding of data shuffling
+101," When using mini batch gradient descent, why is it important to shuffle the data",Data Science,"Understanding of mini-batch gradient descent, understanding of data shuffling, ability to explain the rationale behind a machine learning technique", ability to explain the rationale behind a machine learning technique
+102, Give a simple mathematical argument why a mini-batch version of such ML algorithm might be computationally more efficient than a training with full data set,Data Science,"Mathematical reasoning,Computational complexity analysis,Algorithm understanding",Mathematical reasoning
+102, Give a simple mathematical argument why a mini-batch version of such ML algorithm might be computationally more efficient than a training with full data set,Data Science,"Mathematical reasoning,Computational complexity analysis,Algorithm understanding",Computational complexity analysis
+102, Give a simple mathematical argument why a mini-batch version of such ML algorithm might be computationally more efficient than a training with full data set,Data Science,"Mathematical reasoning,Computational complexity analysis,Algorithm understanding",Algorithm understanding
+103, On a simplified and fundamental scale what makes the newly developed BERT model better than traditional NLP models,Data Science,"Knowledge of NLP models,Understanding of BERT architecture,Comparative analysis,Critical thinking",Knowledge of NLP models
+103, On a simplified and fundamental scale what makes the newly developed BERT model better than traditional NLP models,Data Science,"Knowledge of NLP models,Understanding of BERT architecture,Comparative analysis,Critical thinking",Understanding of BERT architecture
+103, On a simplified and fundamental scale what makes the newly developed BERT model better than traditional NLP models,Data Science,"Knowledge of NLP models,Understanding of BERT architecture,Comparative analysis,Critical thinking",Comparative analysis
+103, On a simplified and fundamental scale what makes the newly developed BERT model better than traditional NLP models,Data Science,"Knowledge of NLP models,Understanding of BERT architecture,Comparative analysis,Critical thinking",Critical thinking
+104, How would you initialize weights in a neural network,Data Science,"Neural network architecture,Weight initialization techniques,Understanding of deep learning",Neural network architecture
+104, How would you initialize weights in a neural network,Data Science,"Neural network architecture,Weight initialization techniques,Understanding of deep learning",Weight initialization techniques
+104, How would you initialize weights in a neural network,Data Science,"Neural network architecture,Weight initialization techniques,Understanding of deep learning",Understanding of deep learning
+105, Why weights are initialized with small random numbers in a neural network What happens when weights are all or constant values,Data Science,"Understanding of neural network architecture,Understanding of weight initialization techniques,Understanding of backpropagation",Understanding of neural network architecture
+105, Why weights are initialized with small random numbers in a neural network What happens when weights are all or constant values,Data Science,"Understanding of neural network architecture,Understanding of weight initialization techniques,Understanding of backpropagation",Understanding of weight initialization techniques
+105, Why weights are initialized with small random numbers in a neural network What happens when weights are all or constant values,Data Science,"Understanding of neural network architecture,Understanding of weight initialization techniques,Understanding of backpropagation",Understanding of backpropagation
+106, Suppose you have a NN with layers and ReLU activations What will happen if we initialize all the weights with the same value,Data Science,"Understanding of neural network training dynamics,Understanding of weight initialization,Knowledge of ReLU activation function",Understanding of neural network training dynamics
+106, Suppose you have a NN with layers and ReLU activations What will happen if we initialize all the weights with the same value,Data Science,"Understanding of neural network training dynamics,Understanding of weight initialization,Knowledge of ReLU activation function",Understanding of weight initialization
+106, Suppose you have a NN with layers and ReLU activations What will happen if we initialize all the weights with the same value,Data Science,"Understanding of neural network training dynamics,Understanding of weight initialization,Knowledge of ReLU activation function",Knowledge of ReLU activation function
+107, What is backpropagation How does it work Why do we need it,Data Science,"Understanding of backpropagation, Explanatory skills, Knowledge application",Understanding of backpropagation
+107, What is backpropagation How does it work Why do we need it,Data Science,"Understanding of backpropagation, Explanatory skills, Knowledge application", Explanatory skills
+107, What is backpropagation How does it work Why do we need it,Data Science,"Understanding of backpropagation, Explanatory skills, Knowledge application", Knowledge application
+108, Why large filter sizes in early layers can be a bad choice How to choose filter size,Data Science,"Understanding of convolutional neural networks, critical thinking, problem-solving",Understanding of convolutional neural networks
+108, Why large filter sizes in early layers can be a bad choice How to choose filter size,Data Science,"Understanding of convolutional neural networks, critical thinking, problem-solving", critical thinking
+108, Why large filter sizes in early layers can be a bad choice How to choose filter size,Data Science,"Understanding of convolutional neural networks, critical thinking, problem-solving", problem-solving
+109, which one is more powerful a layer decision tree or a -layer neural network without any activation function --> Hint non-linearity,Data Science,"Understanding of machine learning models,  knowledge of decision trees, knowledge of neural networks, understanding of activation functions, ability to compare model capabilities",Understanding of machine learning models
+109, which one is more powerful a layer decision tree or a -layer neural network without any activation function --> Hint non-linearity,Data Science,"Understanding of machine learning models,  knowledge of decision trees, knowledge of neural networks, understanding of activation functions, ability to compare model capabilities",  knowledge of decision trees
+109, which one is more powerful a layer decision tree or a -layer neural network without any activation function --> Hint non-linearity,Data Science,"Understanding of machine learning models,  knowledge of decision trees, knowledge of neural networks, understanding of activation functions, ability to compare model capabilities", knowledge of neural networks
+109, which one is more powerful a layer decision tree or a -layer neural network without any activation function --> Hint non-linearity,Data Science,"Understanding of machine learning models,  knowledge of decision trees, knowledge of neural networks, understanding of activation functions, ability to compare model capabilities", understanding of activation functions
+109, which one is more powerful a layer decision tree or a -layer neural network without any activation function --> Hint non-linearity,Data Science,"Understanding of machine learning models,  knowledge of decision trees, knowledge of neural networks, understanding of activation functions, ability to compare model capabilities", ability to compare model capabilities
+110, Both decision trees and deep neural networks are non-linear classifier ie they separates the space by complicated decision boundary Why then it is so much easier for us to intuitively follow a decision tree model vs a deep neural network,Data Science,"Critical thinking, comparative analysis, understanding of machine learning models, model interpretability",Critical thinking
+110, Both decision trees and deep neural networks are non-linear classifier ie they separates the space by complicated decision boundary Why then it is so much easier for us to intuitively follow a decision tree model vs a deep neural network,Data Science,"Critical thinking, comparative analysis, understanding of machine learning models, model interpretability", comparative analysis
+110, Both decision trees and deep neural networks are non-linear classifier ie they separates the space by complicated decision boundary Why then it is so much easier for us to intuitively follow a decision tree model vs a deep neural network,Data Science,"Critical thinking, comparative analysis, understanding of machine learning models, model interpretability", understanding of machine learning models
+110, Both decision trees and deep neural networks are non-linear classifier ie they separates the space by complicated decision boundary Why then it is so much easier for us to intuitively follow a decision tree model vs a deep neural network,Data Science,"Critical thinking, comparative analysis, understanding of machine learning models, model interpretability", model interpretability
+111, If you could take advantage of multiple CPU cores would you prefer a boosted-tree algorithm over a random forest,Data Science,"Understanding of machine learning algorithms,Parallel processing,Algorithm efficiency",Understanding of machine learning algorithms
+111, If you could take advantage of multiple CPU cores would you prefer a boosted-tree algorithm over a random forest,Data Science,"Understanding of machine learning algorithms,Parallel processing,Algorithm efficiency",Parallel processing
+111, If you could take advantage of multiple CPU cores would you prefer a boosted-tree algorithm over a random forest,Data Science,"Understanding of machine learning algorithms,Parallel processing,Algorithm efficiency",Algorithm efficiency

@@ -1,12 +1,16 @@
+%pip install streamlit
+
 import streamlit as st
 import pandas as pd
 import random
 import os
-from consts import JOBS_PATH
+from consts import JOBS_PATH, DATA_PATH
 
 # Load datasets
+jobs_sample = pd.read_csv(os.path.join(JOBS_PATH, "jobs_sample.csv"))
+# code_questions_scores = pd.read_csv(os.path.join(DATA_PATH, "code_scores.csv"))
+# open_questions_scores = pd.read_csv(os.path.join(DATA_PATH, "open_scores.csv"))
 all_jobpostings = pd.read_csv(os.path.join(JOBS_PATH, "all_jobpostings_with_skills.csv"))
-jobs_questions_scores = pd.read_csv(os.path.join(DATA_PATH, "jobs_questions_scores.csv"))
 
 def get_top_questions(job_id, dataset, top_n=20):
     """Get the top N questions for a specific job ID from a dataset."""
@@ -19,8 +23,32 @@ def remove_job_occurrences(job_id, datasets):
     for dataset in datasets:
         dataset.drop(dataset[dataset['job_id'] == job_id].index, inplace=True)
 
+def map_seniority_level(level):
+    """Map level integers to seniority descriptions."""
+    mapping = {
+        0: "Internship",
+        1: "Entry level/Associate",
+        2: "Mid-Senior level/Manager and above"
+    }
+    return mapping.get(level, "Unknown")
+
+
 def main():
     st.title("Job Interview Simulator")
+
+    # Job Selection Method
+    st.header("Choose a Job Selection Method")
+    selection_method = st.radio("How would you like to select the job?", ("Pick from List", "Random Job (10,718 options)"))
+
+    if selection_method == "Pick from Sample List":
+        st.header("Select a Job")
+        jobs_sample["seniority_level"] = jobs_sample["level"].apply(map_seniority_level)
+        jobs_sample["display_info"] = jobs_sample.apply(lambda row: f"{row['job_title']} | {row['seniority_level']} | {row['company_name']}", axis=1)
+        selected_job_row = st.selectbox("Choose a job:", jobs_sample["display_info"].index)
+        selected_job = jobs_sample.loc[selected_job_row]
+    else:
+        st.header("Randomly Selected Job")
+        selected_job = all_jobpostings.sample(1).iloc[0]
 
     # Random Job Selection
     st.header("Selected Job")
@@ -32,7 +60,9 @@ def main():
             st.write(f"**{column_name}**: {entry}")
 
     display_job_details('Job Title', selected_job['job_title'])
-    display_job_details('Seniority Level', selected_job['level'])
+    selected_job["level"].fillna("", inplace=True)
+    selected_job['seniority_level'] = selected_job['level'].apply(map_seniority_level)
+    display_job_details('Seniority Level', selected_job['seniority_level'])
     display_job_details('Company Name', selected_job['company_name'])
     display_job_details('Industry', selected_job['company_industry'])
     display_job_details('Field', selected_job['field'])
@@ -42,16 +72,13 @@ def main():
     st.write(f"[Apply Here]({selected_job['apply_link']})")
     st.write(f"[Job Posting Link]({selected_job['post_link']})")
 
+
     # Button to start simulation
     if st.button("Simulate Interview"):
-        job_id = selected_job['job_id']
-
-        # Remove occurrences of the selected job
-        remove_job_occurrences(job_id, [code_questions, open_questions])
-
         # Retrieve top questions
-        top_code_questions = get_top_questions(job_id, code_questions)
-        top_open_questions = get_top_questions(job_id, open_questions)
+        if selection_method == "Pick from Sample List":
+            top_code_questions = get_top_questions(selected_job, code_questions_scores)
+            top_open_questions = get_top_questions(selected_job, open_questions_scores)
 
         # Randomly choose 2 questions from the top 20 of each type
         code_questions_to_ask = top_code_questions.sample(min(2, len(top_code_questions)))
