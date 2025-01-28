@@ -196,10 +196,10 @@ def main():
             
             if st.session_state.current_question < len(st.session_state.questions) - 1:
                 st.session_state.current_question += 1
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.session_state.test_complete = True
-                st.experimental_rerun()
+                st.rerun()
 
     else:
         # Calculate and display results
