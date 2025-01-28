@@ -121,12 +121,19 @@ def topics_skills_similarity(jobs, spark):
     code_questions_exploded = open_csv_file(spark, MID_CALC_PATH, "code_questions_exploded.csv")
     open_questions_exploded = open_csv_file(spark, MID_CALC_PATH, "open_questions_exploded.csv")
 
+    print("jobs_exploded:")
+    jobs_exploded.limit(10).show()
+    print("code_questions_exploded:")
+    code_questions_exploded.limit(10).show()
+    print("open_questions_exploded:")
+    open_questions_exploded.limit(10).show()
+
     # Collect unique skills and topics for embedding
     unique_skills = [row["skill"] for row in jobs_exploded.select("skill").distinct().collect()]
     unique_code_topics = [row["topic"] for row in code_questions_exploded.select("topic").distinct().collect()]
     unique_open_topics = [row["topic"] for row in open_questions_exploded.select("topic").distinct().collect()]
 
-    print("unique_skills:")
+    print("\nunique_skills:")
     print(unique_skills[:10])
     print("unique_code_topics:")
     print(unique_code_topics[:10])
@@ -140,21 +147,21 @@ def topics_skills_similarity(jobs, spark):
     open_topics_with_embeddings = model.encode(unique_open_topics)
 
     print("skills_embeddings:")
-    skills_embeddings[:10]
+    print(skills_embeddings[:10])
     print("code_topics_with_embeddings:")
-    code_topics_with_embeddings[:10]
+    print(code_topics_with_embeddings[:10])
     print("open_topics_with_embeddings:")
-    open_topics_with_embeddings[:10]
+    print(open_topics_with_embeddings[:10])
 
     # Compute similarity
-    skills_df = pd.DataFrame({"skill": unique_skills, "embedding": list(skills_embeddings)})
-    code_topics_df = pd.DataFrame({"topic": unique_code_topics, "embedding": list(code_topics_with_embeddings)})
-    open_topics_df = pd.DataFrame({"topic": unique_open_topics, "embedding": list(open_topics_with_embeddings)})
+    skills_df = pd.DataFrame({"unique_skill": unique_skills, "embedding": list(skills_embeddings)})
+    code_topics_df = pd.DataFrame({"unique_topic": unique_code_topics, "embedding": list(code_topics_with_embeddings)})
+    open_topics_df = pd.DataFrame({"unique_topic": unique_open_topics, "embedding": list(open_topics_with_embeddings)})
 
     print("code_topics_df:")
-    code_topics_df.head(10)
+    print(code_topics_df.head(10))
     print("open_topics_df:")
-    open_topics_df.head(10)
+    print(open_topics_df.head(10))
 
     # Calculate similarity scores
     def calculate_similarity(topics_df, skills_df):
@@ -162,18 +169,18 @@ def topics_skills_similarity(jobs, spark):
         for _, topic_row in topics_df.iterrows():
             for _, skill_row in skills_df.iterrows():
                 score = float(cosine_similarity([topic_row["embedding"]], [skill_row["embedding"]])[0][0])
-                similarity_records.append((topic_row["topic"], skill_row["skill"], score))
+                similarity_records.append((topic_row["unique_topic"], skill_row["unique_skill"], score))
         return similarity_records
     code_similarity = calculate_similarity(code_topics_df, skills_df)
     open_similarity = calculate_similarity(open_topics_df, skills_df)
 
     print("code_similarity:")
-    code_similarity[:10]
+    print(code_similarity[:10])
     print("open_similarity:")
-    open_similarity[:10]
+    print(open_similarity[:10])
 
-    code_similarity_data = spark.createDataFrame(pd.DataFrame(code_similarity, columns=["topic", "skill", "similarity_score"]))
-    open_similarity_data = spark.createDataFrame(pd.DataFrame(open_similarity, columns=["topic", "skill", "similarity_score"]))
+    code_similarity_data = spark.createDataFrame(pd.DataFrame(code_similarity, columns=["unique_topic", "unique_skill", "similarity_score"]))
+    open_similarity_data = spark.createDataFrame(pd.DataFrame(open_similarity, columns=["unique_topic", "unique_skill", "similarity_score"]))
 
     print("code_similarity_data:")
     code_similarity_data.limit(10).show()
@@ -187,22 +194,22 @@ def topics_skills_similarity(jobs, spark):
     jobs_mapping = jobs_exploded.select(*jobs_cols_to_group_by).distinct()
     topics_avg_similarity = code_similarity_data.join(
         jobs_mapping,
-        code_similarity_data["skill"] == jobs_mapping["skill"]
-    ).groupBy(*(jobs_cols_to_group_by + ["topic"])).agg(
+        code_similarity_data["unique_skill"] == jobs_mapping["skill"]
+    ).groupBy(*(jobs_cols_to_group_by + ["unique_topic"])).agg(
         avg("similarity_score").alias("similarity_per_topic")
     )
 
     code_cols_to_group_by = [col for col in code_questions_exploded.columns if col != "topics"]
     code_questions_mapping = code_questions_exploded.select(*code_cols_to_group_by).distinct()
     code_avg_similarity = topics_avg_similarity.join(
-    code_questions_mapping, topics_avg_similarity["topic"] == code_questions_mapping["topic"]) \
+    code_questions_mapping, topics_avg_similarity["unique_topic"] == code_questions_mapping["topic"]) \
     .groupBy(*(code_cols_to_group_by + jobs_cols_to_group_by)).agg(
     avg("similarity_per_topic").alias("similarity"))
 
     open_cols_to_group_by = [col for col in open_questions_exploded.columns if col != "topics"]
     open_questions_mapping = open_questions_exploded.select(*open_cols_to_group_by).distinct()
     open_avg_similarity = topics_avg_similarity.join(
-        open_questions_mapping, topics_avg_similarity["topic"] == open_questions_mapping["topic"]) \
+        open_questions_mapping, topics_avg_similarity["unique_topic"] == open_questions_mapping["topic"]) \
     .groupBy(*(open_cols_to_group_by + jobs_cols_to_group_by)).agg(
     avg("similarity_per_topic").alias("similarity"))
 
