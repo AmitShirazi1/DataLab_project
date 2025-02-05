@@ -218,35 +218,7 @@ def main():
                     print("Invalid choice. Please enter a number between 1 and 5.")
             except ValueError:
                 print("Invalid input. Please enter a number.")
-                
-    """
-    #### IF WE WANT THE QUESTIONS TO APPEAR IN ORDER BY DOMAIN:
 
-    for domain_code, domain_name in test.domains.items():
-        print(f"\n--- {domain_name} ---")
-        domain_questions = [q for q in test.questions if q['domain'] == domain_code]
-        
-        for question in domain_questions:
-            # Get appropriate choices based on question keying
-            choices = [choice["text"] for choice in CHOICES[question['keyed']]]
-
-            # Display the question and choices
-            print(f"\n{question['text']}")
-            for idx, choice in enumerate(choices, 1):
-                print(f"{idx}. {choice}")
-            
-            # Get a valid response from the user
-            while True:
-                try:
-                    choice_idx = int(input("Enter your choice (1-5): ")) - 1
-                    if 0 <= choice_idx < len(choices):
-                        responses[question['id']] = choices[choice_idx]
-                        break
-                    else:
-                        print("Invalid choice. Please enter a number between 1 and 5.")
-                except ValueError:
-                    print("Invalid input. Please enter a number.")
-    """
     # Calculate scores
     scores = test.calculate_scores(responses)
     
@@ -324,19 +296,6 @@ def main():
         # ------ THE TEST CODE ------
         responses[question['id']] = random.choice(choices)
 
-    """
-    #### IF WE WANT THE QUESTIONS TO APPEAR IN ORDER BY DOMAIN:
-
-    for domain_code, domain_name in test.domains.items():
-        print(f"\n--- {domain_name} ---")
-        domain_questions = [q for q in test.questions if q['domain'] == domain_code]
-        
-        for question in domain_questions:
-            # Get appropriate choices based on question keying
-            choices = [choice["text"] for choice in CHOICES[question['keyed']]]
-            # ------ THE TEST CODE ------
-            responses[question['id']] = random.choice(choices)
-    """
     # Calculate scores
     scores = test.calculate_scores(responses)
     
@@ -389,108 +348,9 @@ if __name__ == "__main__":
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ### optional adjustments ⏬
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #### The streamlit version for the main
-
-# COMMAND ----------
-
-import streamlit as st
-
-def main():
-    st.title("IPIP-NEO-120 Personality Assessment")
-    
-    # Initialize session state
-    if 'test' not in st.session_state:
-        st.session_state.test = IPIPNeoTest()
-        st.session_state.current_question = 0
-        st.session_state.responses = {}
-        st.session_state.test_complete = False
-        random.seed(42)
-        st.session_state.questions = list(st.session_state.test.questions)
-        random.shuffle(st.session_state.questions)
-
-    if not st.session_state.test_complete:
-        # Display progress
-        progress = len(st.session_state.responses) / len(st.session_state.questions)
-        st.progress(progress)
-        st.write(f"Question {len(st.session_state.responses) + 1} of {len(st.session_state.questions)}")
-
-        # Display current question
-        current_q = st.session_state.questions[st.session_state.current_question]
-        st.write(f"**{current_q['text']}**")
-        
-        # Get choices based on question keying
-        choices = [choice["text"] for choice in CHOICES[current_q['keyed']]]
-        
-        # Create radio buttons for choices
-        response = st.radio("Select your answer:", choices, key=f"q_{current_q['id']}")
-        
-        # Next button
-        if st.button("Next"):
-            st.session_state.responses[current_q['id']] = response
-            
-            if st.session_state.current_question < len(st.session_state.questions) - 1:
-                st.session_state.current_question += 1
-                st.experimental_rerun()
-            else:
-                st.session_state.test_complete = True
-                st.experimental_rerun()
-
-    else:
-        # Calculate and display results
-        scores = st.session_state.test.calculate_scores(st.session_state.responses)
-        interpretations = st.session_state.test.get_interpretation(scores)
-        radar_fig, facet_figs = st.session_state.test.create_visualizations(scores)
-
-        st.write("## Your Results")
-        
-        # Display radar chart
-        st.plotly_chart(radar_fig, use_container_width=True)
-        
-        # Display detailed results for each domain
-        for domain_code, domain_name in st.session_state.test.domains.items():
-            with st.expander(f"{domain_name} Details"):
-                st.plotly_chart(facet_figs[domain_code], use_container_width=True)
-                st.write("---")
-                st.write("### Interpretation")
-                st.write(interpretations[domain_code]['text'])
-                st.write("---")
-                st.write("### Domain Description")
-                st.write(interpretations[domain_code]['description'])
-                st.write("---")
-                st.write("### Facet Details")
-                for facet in interpretations[domain_code]['facets']:
-                    st.write(f"**{facet['title']}:** {facet['text']}")
-
-        # Save results
-        if st.button("Save Results"):
-            israel_tz = pytz.timezone('Asia/Jerusalem')
-            results = {
-                'timestamp': datetime.now(israel_tz).isoformat(),
-                'domain_scores': {d: scores[d]['total'] for d in scores},
-                'facet_scores': {d: scores[d]['facets'] for d in scores},
-                'interpretations': interpretations
-            }
-            
-            os.makedirs(DATA_PATH, exist_ok=True)
-            results_file = os.path.join(DATA_PATH, "ipip_neo_results.json")
-            
-            with open(results_file, "w") as f:
-                json.dump(results, f, indent=2)
-            
-            st.success(f"Results have been saved successfully!")
-
-if __name__ == "__main__":
-    main()
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #### scraping 123test 
+# MAGIC #### * The scraping code of 123test 120 questions:
+# MAGIC Those questions are probably identical to what we used at the end.<br>
+# MAGIC We didn't use it and instead used the above github files, due to the lack of information that should be attached to each question (such as their domain or key).
 
 # COMMAND ----------
 

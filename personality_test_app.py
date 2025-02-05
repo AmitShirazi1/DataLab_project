@@ -9,6 +9,76 @@ import random
 import os
 from consts import OCEAN_PATH
 
+# Custom CSS for elegant, professional design
+st.markdown("""
+<style>
+    /* Global Styling */
+    :root {
+        --primary-color: #2c3e50;      /* Deep navy blue */
+        --secondary-color: #3498db;    /* Bright blue */
+        --accent-color: #2ecc71;       /* Soft green */
+        --background-color: #f4f6f8;   /* Light gray-blue */
+        --text-color: #2c3e50;         /* Dark gray */
+    }
+
+    /* Base App Styling */
+    .stApp {
+        background-color: var(--background-color);
+        font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Title Styling */
+    .stTitle {
+        color: var(--primary-color);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Button Styling */
+    .stButton > button {
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .stButton > button:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Card-like Containers */
+    .stContainer {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+
+    .stContainer:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    /* Radio Button Styling */
+    .stRadio > div {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Set page config
 st.set_page_config(page_title="IPIP-NEO Personality Test", layout="wide")
 
@@ -160,90 +230,123 @@ class IPIPNeoTest:
             facet_figs[domain] = fig_facets
         
         return fig_radar, facet_figs
+        
+# Engaging introduction
+def show_welcome_screen():
+    st.title("Unlock Your Professional Potential 🎨")
+    st.markdown("""
+    ### Personality Insights for Career Success
+
+    Discover the unique qualities that set you apart in the workplace.
+
+    This evidence-based assessment provides:
+    - Precise insights into your professional personality
+    - Strategic understanding of your workplace strengths
+    - A scientific approach to personal and professional growth
+
+    **Your Pathway to Professional Self-Awareness** 🚀
+    """)
+
+    if st.button("Start Assessment", key="start_test"):
+        st.session_state.show_welcome = False
 
 def main():
-    st.title("IPIP-NEO-120 Personality Assessment")
-    
-    # Initialize session state
-    if 'test' not in st.session_state:
-        st.session_state.test = IPIPNeoTest()
-        st.session_state.current_question = 0
-        st.session_state.responses = {}
-        st.session_state.test_complete = False
-        random.seed(42)
-        st.session_state.questions = list(st.session_state.test.questions)
-        random.shuffle(st.session_state.questions)
+    # Initialize welcome screen state
+    if 'show_welcome' not in st.session_state:
+        st.session_state.show_welcome = True
 
-    if not st.session_state.test_complete:
-        # Display progress
-        progress = len(st.session_state.responses) / len(st.session_state.questions)
-        st.progress(progress)
-        st.write(f"Question {len(st.session_state.responses) + 1} of {len(st.session_state.questions)}")
-
-        # Display current question
-        current_q = st.session_state.questions[st.session_state.current_question]
-        st.write(f"**{current_q['text']}**")
-        
-        # Get choices based on question keying
-        choices = [choice["text"] for choice in CHOICES[current_q['keyed']]]
-        
-        # Create radio buttons for choices
-        response = st.radio("Select your answer:", choices, key=f"q_{current_q['id']}")
-        
-        # Next button
-        if st.button("Next"):
-            st.session_state.responses[current_q['id']] = response
-            
-            if st.session_state.current_question < len(st.session_state.questions) - 1:
-                st.session_state.current_question += 1
-                st.rerun()
-            else:
-                st.session_state.test_complete = True
-                st.rerun()
-
+    # Show welcome screen or test
+    if st.session_state.show_welcome:
+        show_welcome_screen()
     else:
-        # Calculate and display results
-        scores = st.session_state.test.calculate_scores(st.session_state.responses)
-        interpretations = st.session_state.test.get_interpretation(scores)
-        radar_fig, facet_figs = st.session_state.test.create_visualizations(scores)
-
-        st.write("## Your Results")
+        st.title("IPIP-NEO-120 Personality Assessment")
         
-        # Display radar chart
-        st.plotly_chart(radar_fig, use_container_width=True)
-        
-        # Display detailed results for each domain
-        for domain_code, domain_name in st.session_state.test.domains.items():
-            with st.expander(f"{domain_name} Details"):
-                st.plotly_chart(facet_figs[domain_code], use_container_width=True)
-                st.write("---")
-                st.write("### Interpretation")
-                st.write(interpretations[domain_code]['text'])
-                st.write("---")
-                st.write("### Domain Description")
-                st.write(interpretations[domain_code]['description'])
-                st.write("---")
-                st.write("### Facet Details")
-                for facet in interpretations[domain_code]['facets']:
-                    st.write(f"**{facet['title']}:** {facet['text']}")
+        # Initialize session state
+        if 'test' not in st.session_state:
+            st.session_state.test = IPIPNeoTest()
+            st.session_state.current_question = 0
+            st.session_state.responses = {}
+            st.session_state.test_complete = False
+            random.seed(42)
+            st.session_state.questions = list(st.session_state.test.questions)
+            random.shuffle(st.session_state.questions)
 
-        # Save results
-        if st.button("Save Results"):
-            israel_tz = pytz.timezone('Asia/Jerusalem')
-            results = {
-                'timestamp': datetime.now(israel_tz).isoformat(),
-                'domain_scores': {d: scores[d]['total'] for d in scores},
-                'facet_scores': {d: scores[d]['facets'] for d in scores},
-                'interpretations': interpretations
-            }
+        if not st.session_state.test_complete:
+            # Display progress
+            progress = len(st.session_state.responses) / len(st.session_state.questions)
+            st.progress(progress)
+            st.write(f"Question {len(st.session_state.responses) + 1} of {len(st.session_state.questions)}")
+
+            # Display current question
+            current_q = st.session_state.questions[st.session_state.current_question]
+            st.write(f"**{current_q['text']}**")
             
-            os.makedirs(OCEAN_PATH, exist_ok=True)
-            results_file = os.path.join(OCEAN_PATH, "ipip_neo_results.json")
+            # Get choices based on question keying
+            choices = [choice["text"] for choice in CHOICES[current_q['keyed']]]
+
+            # Add a default "Select an answer" option
+            choices.insert(0, "Select an answer")
+
+            # Create radio buttons for choices
+            response = st.radio("Select your answer:", choices, key=f"q_{current_q['id']}", index=0)
             
-            with open(results_file, "w") as f:
-                json.dump(results, f, indent=2)
+            # Next button
+            if st.button("Next"):
+                if response != "Select an answer":
+                    st.session_state.responses[current_q['id']] = response
+                    
+                    if st.session_state.current_question < len(st.session_state.questions) - 1:
+                        st.session_state.current_question += 1
+                        st.rerun()
+                    else:
+                        st.session_state.test_complete = True
+                        st.rerun()
+                else:
+                    st.warning("Please select an answer before proceeding.")
+
+        else:
+            # Calculate and display results
+            scores = st.session_state.test.calculate_scores(st.session_state.responses)
+            interpretations = st.session_state.test.get_interpretation(scores)
+            radar_fig, facet_figs = st.session_state.test.create_visualizations(scores)
+
+            st.write("## Your Results")
             
-            st.success(f"Results have been saved successfully!")
+            # Display radar chart
+            st.plotly_chart(radar_fig, use_container_width=True)
+            
+            # Display detailed results for each domain
+            for domain_code, domain_name in st.session_state.test.domains.items():
+                with st.expander(f"{domain_name} Details"):
+                    st.plotly_chart(facet_figs[domain_code], use_container_width=True)
+                    st.write("---")
+                    st.write("### Interpretation")
+                    st.write(interpretations[domain_code]['text'])
+                    st.write("---")
+                    st.write("### Domain Description")
+                    st.write(interpretations[domain_code]['description'])
+                    st.write("---")
+                    st.write("### Facet Details")
+                    for facet in interpretations[domain_code]['facets']:
+                        st.write(f"**{facet['title']}:** {facet['text']}")
+
+            # Save results
+            if st.button("Save Results"):
+                israel_tz = pytz.timezone('Asia/Jerusalem')
+                results = {
+                    'timestamp': datetime.now(israel_tz).isoformat(),
+                    'domain_scores': {d: scores[d]['total'] for d in scores},
+                    'facet_scores': {d: scores[d]['facets'] for d in scores},
+                    'interpretations': interpretations
+                }
+                
+                os.makedirs(OCEAN_PATH, exist_ok=True)
+                results_file = os.path.join(OCEAN_PATH, "ipip_neo_results.json")
+                
+                with open(results_file, "w") as f:
+                    json.dump(results, f, indent=2)
+                
+                st.success(f"Results have been saved successfully! ✨")
 
 if __name__ == "__main__":
     main()
