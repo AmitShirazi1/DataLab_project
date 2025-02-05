@@ -6,6 +6,76 @@ import google.generativeai as genai
 from api_keys import API_KEYS
 from consts import JOBS_PATH, DATA_PATH
 
+# Custom CSS for elegant, professional design
+st.markdown("""
+<style>
+    /* Global Styling */
+    :root {
+        --primary-color: #2c3e50;      /* Deep navy blue */
+        --secondary-color: #3498db;    /* Bright blue */
+        --accent-color: #2ecc71;       /* Soft green */
+        --background-color: #f4f6f8;   /* Light gray-blue */
+        --text-color: #2c3e50;         /* Dark gray */
+    }
+
+    /* Base App Styling */
+    .stApp {
+        background-color: var(--background-color);
+        font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Title Styling */
+    .stTitle {
+        color: var(--primary-color);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Button Styling */
+    .stButton > button {
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .stButton > button:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Card-like Containers */
+    .stContainer {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+
+    .stContainer:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    /* Radio Button Styling */
+    .stRadio > div {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Caching large dataframes for better performance
 @st.cache_data
 def load_jobs_sample():
