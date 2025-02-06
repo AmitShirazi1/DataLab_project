@@ -117,6 +117,7 @@ def main():
         
         if st.button("Start Personality Test 🧩", use_container_width=True):
             st.session_state.page = "personality"
+            st.session_state.stage = "welcome"
 
     with col2:
         st.markdown("""
@@ -128,6 +129,7 @@ def main():
         
         if st.button("Launch Interview Simulator 🤝", use_container_width=True):
             st.session_state.page = "interview"
+            st.session_state.stage = "selection_method"
     
     # Render the selected page
     if hasattr(st.session_state, 'page'):

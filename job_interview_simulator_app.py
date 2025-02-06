@@ -447,11 +447,15 @@ def feedback_form():
 
 
 def main():
-    st.title("Job Interview Simulator")
+    st.title("Interview Simulator")
+
+    # Ensure all necessary session state variables are initialized
+    if "stage" not in st.session_state:
+        st.session_state.stage = "selection_method"
 
     if "selected_job" not in st.session_state:
-        st.session_state.selected_job = None  # or a default value like {}
-    
+        st.session_state.selected_job = None
+
     if st.session_state.stage == "selection_method":
         choose_selection_method()
 
@@ -466,16 +470,15 @@ def main():
 
     if st.session_state.stage == "simulation":
         simulate_interview()
-    
+
     if st.session_state.stage == "evaluation":
         evaluate_answers()
-    
+
     if st.session_state.stage == "feedback":
         feedback_form()
 
     if st.session_state.stage == "completed":
-        st.write("Interview process completed. Thank you for participating!")
-
+        st.write("Interview process completed. Thank you for participating!🎉")
 
 if __name__ == "__main__":
     main()
