@@ -8,6 +8,16 @@ from consts import DATA_PATH, QUESTIONS_PATH, MID_CALC_PATH, open_csv_file
 
 
 def topics_skills_similarity(jobs, spark):
+    """
+    Calculate the similarity between job skills and question topics using embeddings and cosine similarity.
+
+    Args:
+        jobs (DataFrame): Spark DataFrame containing job data with a 'skills' column.
+        spark (SparkSession): Spark session object.
+
+    Returns:
+        tuple: Two Spark DataFrames containing the aggregated similarity scores for code and open questions.
+    """
     jobs_exploded = jobs.withColumn(
         "skill", explode(split(col("skills"), ",\\s*"))
     )

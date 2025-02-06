@@ -6,7 +6,10 @@ import google.generativeai as genai
 from api_keys import API_KEYS
 from consts import JOBS_PATH, DATA_PATH
 
-# Custom CSS for elegant, professional design
+if __name__ == "__main__":
+    st.set_page_config(page_title="Job Interview Simulator", page_icon="🧑‍💼", layout="wide")
+
+# Custom CSS
 st.markdown("""
 <style>
     /* Global Styling */
@@ -122,9 +125,6 @@ def choose_selection_method():
         key="selection_method"
     )
 
-    print("1 selection", selection)
-    print("1 selection_method", st.session_state.selection_method)
-
     if st.button("Next"):
         if st.session_state.selection_method == "Pick from List":
             next_stage("pick_from_list")
@@ -135,15 +135,10 @@ def choose_selection_method():
 def pick_from_list_of_jobs():
     st.header("Select a Job")
 
-    print("2 selection_method", st.session_state.selection_method)
-
     # Ensure display_info column is correctly formatted
     jobs_sample["display_info"] = jobs_sample.apply(
         lambda row: f"{row['job_title'] if pd.notna(row['job_title']) else ''} | {row['company_name'] if pd.notna(row['company_name']) else ''}", axis=1
     )
-
-    print("3 jobs_sample", jobs_sample)
-    print("3 jobs_sample.index", jobs_sample.index)
 
     selected_index = st.radio(
         "Choose a job:", 
@@ -154,32 +149,22 @@ def pick_from_list_of_jobs():
 
     # Show selected job information but do not proceed automatically
     if "selected_job_index" in st.session_state and st.session_state.selected_job_index is not None:
-        print(f"5 Selected Job Title: {jobs_sample.loc[st.session_state.selected_job_index, 'job_title']}")  # Debug
-
         # Store job in session state but do not proceed yet
         st.session_state.selected_job = jobs_sample.loc[st.session_state.selected_job_index].copy()  # Use .copy() to avoid reference issues
-        print(f"5 Debug: Selected Job - {st.session_state.selected_job['job_title']}")  # Debug info
-
     else:
         st.write("No valid job selected.")
-        print("5 No valid job selected.")
-
-    print("6 selected_job", st.session_state.get("selected_job", None))
 
     # Only proceed when user confirms
     if st.button("Confirm Selection"):
         if "selected_job" in st.session_state and st.session_state.selected_job_index is not None:
             next_stage("job_details")
-            print("4 Confirm Selection button clicked")  # Debug output to check if the button is clicked
         else:
             st.write("Please select a job before confirming.")
-            print("4 No job selected before confirming.")
 
 
 def pick_random_job():  
     # Randomly sample a job from all job postings
     st.session_state.selected_job = all_jobpostings.sample(1).iloc[0].copy()
-    print(f"7 Debug: Randomly Selected Job - {st.session_state.selected_job['job_title']}")
 
     if st.button("Choose Random Job"):
         # TODO: Pick a random job from the dataset
@@ -216,22 +201,14 @@ def get_open_questions(job):
     if "asked_open_questions" not in st.session_state:
         st.session_state.asked_open_questions = set()
 
-    print("10 open_questions_scores", open_questions_scores)
-
     # Filter relevant questions for the selected job
     relevant_questions = open_questions_scores[
         open_questions_scores["job_id"] == job["job_id"]
-    ]
-
-    print("11 relevant_questions", relevant_questions)
-    
+    ]    
     # Remove already asked questions
     relevant_questions = relevant_questions[
         ~relevant_questions["question"].isin(st.session_state.asked_open_questions)
     ]
-
-    print("12 asked_open_questions", st.session_state.asked_open_questions)
-    print("12 relevant_questions", relevant_questions)
     
     if relevant_questions.empty:
         st.warning("No more available questions for this job.")
@@ -239,9 +216,6 @@ def get_open_questions(job):
 
     # Ensure at least one question from 'General' category
     general_questions = relevant_questions[relevant_questions["category"] == "General"]
-    
-    print("13 general_questions", general_questions)
-
     selected_questions = []
 
     # Pick one 'General' question if available
@@ -250,9 +224,6 @@ def get_open_questions(job):
         selected_questions.append(general_sample.iloc[0])
         st.session_state.asked_open_questions.add(general_sample.iloc[0]["question"])  # Mark as used
 
-    print("14 selected_questions", selected_questions)
-    print("14 asked_open_questions", st.session_state.asked_open_questions)
-
     # Select remaining questions
     remaining_count = 3 - len(selected_questions)
     
@@ -260,20 +231,12 @@ def get_open_questions(job):
     remaining_questions = relevant_questions[
         ~relevant_questions["question"].isin(st.session_state.asked_open_questions)
     ]
-
-    print("15 remaining_questions", remaining_questions)
-
     # If there are not enough remaining questions, take as many as possible
     remaining_questions_sample = remaining_questions.sample(min(remaining_count, len(remaining_questions)))
-
-    print("16 remaining_questions_sample", remaining_questions_sample)
 
     for _, question in remaining_questions_sample.iterrows():
         selected_questions.append(question)
         st.session_state.asked_open_questions.add(question["question"])  # Mark as used
-
-    print("17 selected_questions", selected_questions)
-    print("17 asked_open_questions", st.session_state.asked_open_questions)
 
     return selected_questions
 
@@ -284,22 +247,14 @@ def get_code_questions(job):
     if "asked_code_questions" not in st.session_state:
         st.session_state.asked_code_questions = set()
 
-    print("30 code_questions_scores", code_questions_scores)
-
     # Filter relevant questions for the selected job
     relevant_code_questions = code_questions_scores[
         code_questions_scores["job_id"] == job["job_id"]
     ]
-
-    print("31 relevant_code_questions", relevant_code_questions)
-
     # Remove already asked questions
     relevant_code_questions = relevant_code_questions[
         ~relevant_code_questions["question"].isin(st.session_state.asked_code_questions)
     ]
-
-    print("32 asked_code_questions", st.session_state.asked_code_questions)
-    print("32 relevant_code_questions", relevant_code_questions)
     
     if relevant_code_questions.empty:
         st.warning("No more coding questions available for this job.")
@@ -310,9 +265,6 @@ def get_code_questions(job):
 
     for _, question in selected_code_questions.iterrows():
         st.session_state.asked_code_questions.add(question["question"])  # Mark as used
-
-    print("33 selected_code_questions", selected_code_questions)
-    print("33 asked_code_questions", st.session_state.asked_code_questions)
 
     return selected_code_questions.to_dict(orient="records")
 
@@ -325,36 +277,21 @@ def simulate_interview():
         st.session_state.questions = get_open_questions(st.session_state.selected_job)
         st.session_state.questions += get_code_questions(st.session_state.selected_job)  # Append coding questions
         st.session_state.current_question = 0
-
-    print("18 questions", st.session_state.questions)
-    print("18 current_question", st.session_state.current_question)
     
     questions = st.session_state.questions
     if "answers" not in st.session_state:
         st.session_state.answers = dict()
 
-    print("19 questions", questions)
-    print("19 answers", st.session_state.answers)
-
     if st.session_state.current_question < len(questions):
-
-        print("20 current_question", st.session_state.current_question)
-
         question = questions[st.session_state.current_question]
         st.subheader(f"Question {st.session_state.current_question + 1}")
 
         # Check if it's a coding question (coding questions have a 'solution' field)
         is_coding_question = "solution" in question
 
-        st.write(question["question"])
-
-        print("21 question", question)
-        
+        st.write(question["question"])        
         user_answer = st.text_area("Your Answer", key=f"answer_{st.session_state.current_question}")
         st.session_state.answers[st.session_state.current_question] = user_answer
-
-        print("22 user_answer", user_answer)
-        print("22 answers", st.session_state.answers)
 
         if st.button("Next"):
             st.session_state.current_question += 1
@@ -365,6 +302,7 @@ def simulate_interview():
         if st.button("Evaluate Answers"):
             next_stage("evaluation")
 
+
 def gemini_evaluation(question, is_coding, user_answer):
     success = False  # Flag to indicate if evaluation was successful or the APIs are exhausted
     for api_key in API_KEYS.values():
@@ -372,11 +310,8 @@ def gemini_evaluation(question, is_coding, user_answer):
         genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
         model = genai.GenerativeModel('gemini-1.5-flash')
 
-        print("42 api_key", api_key)
-
         if is_coding:
             solution = question["solution"]
-            print("42 solution", solution)
             prompt = f"""
                 The user has submitted a code solution to a programming question. Your task is to analyze and evaluate the code, considering both correctness and the quality of the approach. Even if the code has syntax errors or does not compile, partial credit should be awarded if the logic or idea is sound. 
 
@@ -454,10 +389,8 @@ def gemini_evaluation(question, is_coding, user_answer):
                 Provide constructive feedback and assign a score based on clarity, completeness, reasoning, and relevance.
                 """
         try:
-            print("43 prompt", prompt)
             response = model.generate_content(prompt)
             evaluation = response.text.strip()
-            print("response:", evaluation)
             if not evaluation[0].isdigit():
                 raise Exception("Invalid response.")
             st.write(f"**Evaluation:** {evaluation}")
@@ -479,24 +412,38 @@ def evaluate_answers():
     answers = st.session_state.answers
     prompt = ""
 
-    print("40 questions", questions)
-    print("40 answers", answers)
-    print("40 prompt", prompt)
-
     for idx, question in enumerate(questions):
         user_answer = answers.get(idx, "").strip()
         is_coding = "solution" in question
         st.write(f"**Question {idx+1}:** {question['question']}")
         st.write(f"**Your Answer:** {user_answer}")
 
-        print("41 idx", idx)
-        print("41 question", question)
-        print("41 user_answer", user_answer)
-        print("41 is_coding", is_coding)
-
         success = False
         while not success:
             success = gemini_evaluation(question, is_coding, user_answer)
+
+    st.subheader("Would you like to give us feedback?")
+    if st.button("Feedback form"):
+        next_stage("feedback")
+        st.rerun()
+
+
+def feedback_form():
+    st.subheader("Feedback Form")
+    st.write("We appreciate your feedback! Please answer the following questions:")
+    
+    quality = st.radio("How would you rate the overall quality of the interview simulation?", ["Excellent", "Good", "Average", "Poor"], index=1)
+    relevance = st.radio("How relevant were the questions to the job posting? (1-5)", ["1", "2", "3", "4", "5"], index=2)
+    alignment = st.radio("How well did the AI-based simulator align with the real-world interview process?", ["Not aligned", "Somewhat aligned", "Well aligned", "Perfectly aligned"], index=1)
+    evaluation_quality = st.radio("How would you rate the quality of the AI's evaluation on your answers?", ["Excellent", "Good", "Average", "Poor"], index=1)
+    feedback_accuracy = st.radio("Did the AI feedback provide valuable insights for improvement?", ["Yes", "No", "Somewhat"], index=2)
+    use_again = st.radio("Would you use this simulator again for future job interviews?", ["Yes", "No", "Maybe"], index=2)
+    suggestions = st.text_area("Do you have any additional comments or suggestions for improving the interview simulator?")
+    
+    if st.button("Submit Feedback"):
+        st.success("Thank you for your feedback!")
+        st.session_state.stage = "completed"
+        st.rerun()
 
 
 def main():
@@ -522,7 +469,13 @@ def main():
     
     if st.session_state.stage == "evaluation":
         evaluate_answers()
-
     
+    if st.session_state.stage == "feedback":
+        feedback_form()
+
+    if st.session_state.stage == "completed":
+        st.write("Interview process completed. Thank you for participating!")
+
+
 if __name__ == "__main__":
     main()

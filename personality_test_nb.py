@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC #### Those are the original test website links: ⬇️
+# MAGIC #### Those are the original test website links: ⬇️💻
 # MAGIC https://github.com/rubynor/bigfive-web <br>
 # MAGIC https://bigfive-test.com/ <br>
 # MAGIC (We based our personality test and its results on this MIT website)
@@ -344,69 +344,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC #### * The scraping code of 123test 120 questions:
-# MAGIC Those questions are probably identical to what we used at the end.<br>
-# MAGIC We didn't use it and instead used the above github files, due to the lack of information that should be attached to each question (such as their domain or key).
-
-# COMMAND ----------
-
-pip install requests beautifulsoup4
-
-# COMMAND ----------
-
-import requests
-from bs4 import BeautifulSoup
-import csv
-
-# Function to scrape the webpage
-def scrape_website(url, tag, class_name=None):
-    # Send a request to the website
-    response = requests.get(url)
-    if response.status_code != 200:
-        print(f"Failed to fetch the webpage. Status code: {response.status_code}")
-        return []
-
-    # Parse the HTML content
-    soup = BeautifulSoup(response.content, 'html.parser')
-
-    # Find all elements with the specified tag and class
-    if class_name:
-        elements = soup.find_all(tag, class_=class_name)
-    else:
-        elements = soup.find_all(tag)
-
-    # Extract and return text content
-    return [element.text.strip() for element in elements]
-
-# Function to save data to a CSV file
-def save_to_csv(data, filename="output.csv"):
-    with open(filename, mode='w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Content"])  # Header
-        for row in data:
-            writer.writerow([row])
-
-
-
-# COMMAND ----------
-
-# URL of the website to scrape
-url = "https://www.123test.com/personality-test/" 
-
-# HTML tag and class to extract
-tag = "div"  
-class_name = "its123-label-text"
-
-# Scrape the website
-scraped_data = scrape_website(url, tag, class_name)
-
-# Save the data to a CSV file
-if scraped_data:
-    save_to_csv(scraped_data, filename="big_5_test.csv")
-    print(f"Scraped {len(scraped_data)} items and saved to big_5_test.csv")
-else:
-    print("Something went worng! No data scraped.")

@@ -2,10 +2,12 @@ import streamlit as st
 import sys
 import os
 
-# Add the directory containing your scripts to the Python path
+# Set page title with icon
+st.set_page_config(page_title="Job interview Simulator", page_icon="📋✅", layout="wide")
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# Import your existing scripts
+# Importing the 2 apps for the 2 simulations
 import personality_test_app 
 import job_interview_simulator_app
 
@@ -80,10 +82,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 def main():
-    # Set page title with icon
-    st.set_page_config(page_title="Job interview Simulator", page_icon="📋✅")
-
-    # Elegant Title with Gradient
+    # Title
     st.markdown("""
     <h1 style='text-align: center; 
                background: linear-gradient(to right, #2c3e50, #3498db);
@@ -95,7 +94,7 @@ def main():
     </h1>
     """, unsafe_allow_html=True)
 
-    # Subheader with subtle description
+    # Subheader
     st.markdown("""
     <p style='text-align: center; 
               color: #7f8c8d; 
@@ -118,7 +117,7 @@ def main():
         
         if st.button("Start Personality Test 🧩", use_container_width=True):
             st.session_state.page = "personality"
-    
+
     with col2:
         st.markdown("""
         <div class="stContainer" style="text-align: center; padding: 30px;">

@@ -1,3 +1,4 @@
+import sys
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -9,7 +10,10 @@ import random
 import os
 from consts import OCEAN_PATH
 
-# Custom CSS for elegant, professional design
+if __name__ == "__main__":
+    st.set_page_config(page_title="Personality Test", page_icon="🎨", layout="wide")
+
+# Custom CSS
 st.markdown("""
 <style>
     /* Global Styling */
@@ -78,10 +82,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
-# Set page config
-st.set_page_config(page_title="IPIP-NEO Personality Test", layout="wide")
-
 
 # Define choices structure
 CHOICES = {
@@ -230,7 +230,7 @@ class IPIPNeoTest:
             facet_figs[domain] = fig_facets
         
         return fig_radar, facet_figs
-        
+
 # Engaging introduction
 def show_welcome_screen():
     st.title("Unlock Your Professional Potential 🎨")
@@ -250,17 +250,47 @@ def show_welcome_screen():
     if st.button("Start Assessment", key="start_test"):
         st.session_state.show_welcome = False
 
+
+def feedback_form():
+    st.subheader("Feedback Form")
+    st.write("We appreciate your feedback! Please answer the following questions:")
+
+    quality = st.radio("How helpful did you find the OCEAN test for understanding your personality traits? (1-5)",
+                       ["1", "2", "3", "4", "5"], index=4)
+    relevance = st.radio(
+        "Did the personality test results give you valuable insights into your strengths? (Yes, No, Somewhat)",
+        ["Yes", "No", "Somewhat"], index=0)
+    alignment = st.radio("Would you recommend the personality test to others preparing for interviews? (Yes, No)",
+                         ["Yes", "No"], index=0)
+    use_again = st.radio("Would you use this simulator again for future job interviews?", ["Yes", "No", "Maybe"],
+                         index=0)
+    suggestions = st.text_area("Do you have any additional comments or suggestions for improving the personality test?")
+
+    if st.button("Submit Feedback"):
+        st.success("Thank you for your feedback!")
+        st.session_state.stage = "completed"
+        st.rerun()
+
 def main():
     # Initialize welcome screen state
     if 'show_welcome' not in st.session_state:
         st.session_state.show_welcome = True
 
+    # Initialize stage state
+    if 'stage' not in st.session_state:
+        st.session_state.stage = "welcome"
+
     # Show welcome screen or test
-    if st.session_state.show_welcome:
-        show_welcome_screen()
-    else:
+    if st.session_state.stage == "welcome":
+        if st.session_state.show_welcome:
+            show_welcome_screen()
+        else:
+            st.session_state.stage = "test"
+            st.rerun()
+
+    elif st.session_state.stage == "test":
         st.title("IPIP-NEO-120 Personality Assessment")
-        
+
         # Initialize session state
         if 'test' not in st.session_state:
             st.session_state.test = IPIPNeoTest()
@@ -280,21 +310,18 @@ def main():
             # Display current question
             current_q = st.session_state.questions[st.session_state.current_question]
             st.write(f"**{current_q['text']}**")
-            
+
             # Get choices based on question keying
             choices = [choice["text"] for choice in CHOICES[current_q['keyed']]]
 
-            # Add a default "Select an answer" option
-            choices.insert(0, "Select an answer")
-
             # Create radio buttons for choices
-            response = st.radio("Select your answer:", choices, key=f"q_{current_q['id']}", index=0)
-            
+            response = st.radio("Select your answer:", choices, key=f"q_{current_q['id']}")
+
             # Next button
             if st.button("Next"):
                 if response != "Select an answer":
                     st.session_state.responses[current_q['id']] = response
-                    
+
                     if st.session_state.current_question < len(st.session_state.questions) - 1:
                         st.session_state.current_question += 1
                         st.rerun()
@@ -311,10 +338,10 @@ def main():
             radar_fig, facet_figs = st.session_state.test.create_visualizations(scores)
 
             st.write("## Your Results")
-            
+
             # Display radar chart
             st.plotly_chart(radar_fig, use_container_width=True)
-            
+
             # Display detailed results for each domain
             for domain_code, domain_name in st.session_state.test.domains.items():
                 with st.expander(f"{domain_name} Details"):
@@ -339,14 +366,27 @@ def main():
                     'facet_scores': {d: scores[d]['facets'] for d in scores},
                     'interpretations': interpretations
                 }
-                
+
                 os.makedirs(OCEAN_PATH, exist_ok=True)
                 results_file = os.path.join(OCEAN_PATH, "ipip_neo_results.json")
-                
+
                 with open(results_file, "w") as f:
                     json.dump(results, f, indent=2)
-                
+
                 st.success(f"Results have been saved successfully! ✨")
+                st.session_state.stage = "feedback"
+                st.rerun()
+    # Ask user for feedback
+    elif st.session_state.stage == "feedback":
+        feedback_form()
+
+    elif st.session_state.stage == "completed":
+        st.success("Thank you for completing the personality test and providing feedback! 🎉")
+        if st.button("Start New Test"):
+            # Reset all session state
+            for key in list(st.session_state.keys()):
+                del st.session_state[key]
+            st.rerun()
 
 if __name__ == "__main__":
     main()

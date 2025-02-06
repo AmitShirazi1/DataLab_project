@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md
+# MAGIC ### 🌐💻 Scraping "Leetcode" - interviews' code questions
+
+# COMMAND ----------
+
 import requests
 import pandas as pd
 import json
@@ -152,3 +157,68 @@ all_urls = extract_all_urls(url)
 # Print the extracted URLs
 for i, extracted_url in enumerate(all_urls, 1):
     print(f"{i}. {extracted_url}")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### 💡Scraping "123test" - 120 personality questions
+# MAGIC Those questions are probably identical to what we used at the end.<br>
+# MAGIC We didn't use it for the personality test and instead used github files we have found, due to the lack of information that should be attached to each question (such as their domain or key).
+
+# COMMAND ----------
+
+pip install requests beautifulsoup4
+
+# COMMAND ----------
+
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+# Function to scrape the webpage
+def scrape_website(url, tag, class_name=None):
+    # Send a request to the website
+    response = requests.get(url)
+    if response.status_code != 200:
+        print(f"Failed to fetch the webpage. Status code: {response.status_code}")
+        return []
+
+    # Parse the HTML content
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Find all elements with the specified tag and class
+    if class_name:
+        elements = soup.find_all(tag, class_=class_name)
+    else:
+        elements = soup.find_all(tag)
+
+    # Extract and return text content
+    return [element.text.strip() for element in elements]
+
+# Function to save data to a CSV file
+def save_to_csv(data, filename="output.csv"):
+    with open(filename, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Content"])  # Header
+        for row in data:
+            writer.writerow([row])
+
+
+# COMMAND ----------
+
+# URL of the website to scrape
+url = "https://www.123test.com/personality-test/" 
+
+# HTML tag and class to extract
+tag = "div"  
+class_name = "its123-label-text"
+
+# Scrape the website
+scraped_data = scrape_website(url, tag, class_name)
+
+# Save the data to a CSV file
+if scraped_data:
+    save_to_csv(scraped_data, filename="big_5_test.csv")
+    print(f"Scraped {len(scraped_data)} items and saved to big_5_test.csv")
+else:
+    print("Something went worng! No data scraped.")
