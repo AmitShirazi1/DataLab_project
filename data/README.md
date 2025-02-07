@@ -26,8 +26,8 @@ Contains datasets related to job postings. It includes raw job postings from var
 - **`job_descriptions_and_skills.csv`** – Jobs with required skills (Source: [Kaggle](https://www.kaggle.com/datasets/batuhanmutlu/job-skill-set)).
 - **`linkedin_hightech_jobs.csv`** – Job postings collected by Itamar Shashar.
 - **`indeed_jobs.csv`** – Job postings collected by Itamar Shashar.
-- **`glassdoor_data_jobs_and_company_info.csv`** – Job postings related to the data field (Source: [GitHub](https://github.com/Deff-ux/Scrapping-Glassdoor-Job-Posting-)).
-- **`linkedin_data_jobs.csv`** – Job postings for data and software fields (Source: [GitHub](https://github.com/Mlawrence95/LinkedIn-Tech-Job-Data)).
+- **`glassdoor_data_jobs_and_company_info.csv`** – Job postings related to the data field (Source: collected by Sergiy Horef from [GitHub](https://github.com/Deff-ux/Scrapping-Glassdoor-Job-Posting-)).
+- **`linkedin_data_jobs.csv`** – Job postings for data and software fields (Source: collected by Sergiy Horef from [GitHub](https://github.com/Mlawrence95/LinkedIn-Tech-Job-Data)).
 
 #### **Processed Job Postings:**
 - **`all_jobpostings.csv`** – Unified dataset of job postings with key attributes.
@@ -38,8 +38,8 @@ Contains datasets related to job postings. It includes raw job postings from var
 ### 3. `mid_calculation/`
 Stores intermediate datasets used for computations and analysis.
 
-- **`code_questions_exploded.csv`** – Coding questions with skill topics expanded.
-- **`open_questions_exploded.csv`** – Open-ended questions with skill topics expanded.
+- **`code_questions_exploded.csv`** – Coding questions with their topics column exploded.
+- **`open_questions_exploded.csv`** – Open-ended questions with their topics column exploded.
 - **`code_questions_similarity.csv`** – Similarity scores for coding question-job pairs.
 - **`open_questions_similarity.csv`** – Similarity scores for open-ended question-job pairs.
 - **`code_questions_transformed_similarity.csv`** – Transformed similarity scores for coding questions.
@@ -56,8 +56,8 @@ Contains datasets of interview questions and answers, including coding questions
 - **`OCEAN_test/`** – Big Five Personality Test data (Sources: [GitHub](https://github.com/rubynor/bigfive-web) and [123Test](https://www.123test.com/personality-test/)).
 
 #### **Raw Coding Questions:**
-- **`leetcode_problems&solutions_links.csv`** – LeetCode problems with links (Source: [GitHub](https://github.com/hxu296/leetcode-company-wise-problems-2022)).
-- **`leetcode_problems_data.csv`** – Scraped LeetCode problem details.
+- **`leetcode_problems&solutions_links.csv`** – LeetCode problems with links (Source: [GitHub](https://github.com/hxu296/leetcode-company-wise-problems-2022/blob/main/data/leetcode_problems.csv)).
+- **`leetcode_problems_data.csv`** – LeetCode problem details and content (Source: scraped by us).
 - **`leetcode_problems_metadata.csv`** – Metadata about LeetCode problems (Source: [Kaggle](https://www.kaggle.com/datasets/jaydeepagravat94583/leetcode?resource=download)).
 
 #### **Raw Open-Ended Questions:**
@@ -65,16 +65,16 @@ Contains datasets of interview questions and answers, including coding questions
 - **`general_open_questions.csv`** – Common interview questions (Source: [Glassdoor](https://www.glassdoor.com/blog/common-interview-questions/)).
 
 #### **Processed Questions and Answers:**
-- **`all_code_problems_with_solutions.csv`** – Unified dataset of coding problems and solutions.
+- **`all_code_problems_with_solutions.csv`** – Unified dataset of coding problems and solutions (Solutions source:[GitHub](https://github.com/fishercoder1534/Leetcode/tree/master/src/main/java/com/fishercoder/solutions).
 - **`all_open_questions.csv`** – Unified dataset of open-ended questions.
-- **`all_code_questions_with_topics.csv`** – Coding questions with topic assignments inferred using Gemini.
+- **`all_code_questions_with_topics.csv`** – Coding questions with topics inferred using Gemini to replace missing topics values.
 - **`all_open_questions_with_topics.csv`** – Open-ended questions with topic assignments inferred using Gemini.
 
 ---
 
 ### 5. **Top Scoring Questions**
-- **`top_code_questions.csv`** – Top 50 jobs with their best 20 coding questions.
-- **`top_open_questions.csv`** – Top 50 jobs with their best 20 open-ended questions.
+- **`top_code_questions.csv`** – Top 50 jobs with their 20 best-scoring coding questions, according to the heuristic.
+- **`top_open_questions.csv`** – Top 50 jobs with their 20 best-scoring open-ended questions, according to the heuristic.
 
 These files are used in the simulator app to present a job selection interface where users pick a job, and relevant questions are randomly chosen from these datasets.
 
@@ -82,7 +82,7 @@ These files are used in the simulator app to present a job selection interface w
 
 ## Notes
 - The datasets have been collected from publicly available sources and proprietary scraping efforts.
-- Processed datasets were enriched using **Gemini API** for skill inference and heuristic scoring.
+- Processed datasets were enriched using **Gemini API** for skills and topics inference and heuristic scoring.
 - Intermediate calculation files provide transparency for debugging and improving the model.
 
 This README serves as a reference for understanding the data used in the **Job Interview Simulator** project. If you have any questions, please refer to the source links or contact the project contributors.
