@@ -8,22 +8,16 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 
 ## Table of Contents
 1. [Features](#features)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Project Structure](#project-structure)
+2. [Project Structure](#project-structure)
+   - [Folder descriptions](#folder-descriptions)
+   - [File Descriptions](#file-descriptions)
+3. [Installation](#installation)
+4. [Usage](#usage)
 5. [Data Collection](#data-collection)
-6. [Methodologies](#methodologies)
+6. [Methodology](#methodology)
 7. [Evaluation](#evaluation)
 8. [Limitations & Future Work](#limitations--future-work)
-
-9. - [Project Structure](#project-structure)
-- [File Descriptions](#file-descriptions)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Methodology](#methodology)
-- [Evaluation](#evaluation)
-- [Limitations](#limitations)
-- [Contributors](#contributors)
+9. [Contributors](#contributors)
 
 ---
 
@@ -36,11 +30,13 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 ## Project Structure
 The root directory contains the following files and folders:
 
-### File Descriptions
+### Folder descriptions
 - **`data/`**: Contains all datasets, including collected and created ones.
 - **`requirements/`**: Contains dependency files:
   - `app_requirements.txt`: Requirements for running the app as a user.
   - `requirements.txt`: Requirements for running all project files as a developer.
+
+### File Descriptions
 - **`answer_questions.ipynb`**: Uses Gemini API to simulate user responses to interview questions, evaluates the model, and compares predicted scores to Gemini’s true labels.
 - **`calculate_heuristic_score.py`**: Computes topics-skills similarity scores for each question-job pair.
 - **`consts.py`**: Stores constant values used throughout the project.
