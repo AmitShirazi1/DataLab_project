@@ -45,7 +45,7 @@ The root directory contains the following files and folders:
 - **`job_interview_simulator_app.py`**: Implements the job interview simulator, guiding users through job selection, answering interview questions, and receiving feedback.
 - **`personality_test_app.py`**: Implements the personality test simulator, presenting users with 120 personality questions and generating a graphical and textual personality assessment.
 - **`personality_test_nb.py`**: Provides an example personality test.
-- **`scraping_websites.py`**: Scrapes LeetCode for interview questions, including attributes like topics and acceptance rates.
+- **`scraping_websites.py`**: Scrapes LeetCode for interview questions, including attributes like topics and acceptance.
 - **`select_interview_questions.ipynb`**: Processes datasets by filling missing values using Gemini API, calculating heuristic scores, and selecting the top 20 question-job pairs.
 - **`unify_datasets.ipynb`**: Merges collected datasets into three unified datasets: job postings, coding questions with solutions, and open questions.
 - **`visualizations.ipynb`**: Conducts exploratory data analysis (EDA) and visualizes the datasets.
