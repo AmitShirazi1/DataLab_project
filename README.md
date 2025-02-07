@@ -16,6 +16,15 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 7. [Evaluation](#evaluation)
 8. [Limitations & Future Work](#limitations--future-work)
 
+9. - [Project Structure](#project-structure)
+- [File Descriptions](#file-descriptions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methodology](#methodology)
+- [Evaluation](#evaluation)
+- [Limitations](#limitations)
+- [Contributors](#contributors)
+
 ---
 
 ## Features
@@ -23,6 +32,28 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 - **Personality Test Simulation**: 120-question assessment based on the OCEAN model, with graphical and textual results.
 - **AI-Based Evaluation**: Uses the Gemini API to assess answer quality and job-question relevance.
 - **Data-Driven Question Selection**: Heuristic scoring for optimal job-question matching.
+
+## Project Structure
+The root directory contains the following files and folders:
+
+### File Descriptions
+- **`data/`**: Contains all datasets, including collected and created ones.
+- **`requirements/`**: Contains dependency files:
+  - `app_requirements.txt`: Requirements for running the app as a user.
+  - `requirements.txt`: Requirements for running all project files as a developer.
+- **`answer_questions.ipynb`**: Uses Gemini API to simulate user responses to interview questions, evaluates the model, and compares predicted scores to Gemini’s true labels.
+- **`calculate_heuristic_score.py`**: Computes topics-skills similarity scores for each question-job pair.
+- **`consts.py`**: Stores constant values used throughout the project.
+- **`evaluate_answers.ipynb`**: Uses a different version of Gemini to evaluate user answers, providing scores and feedback.
+- **`home_page_app.py`**: The main homepage application that links to the job simulator and personality test apps.
+- **`job_interview_simulator_app.py`**: Implements the job interview simulator, guiding users through job selection, answering interview questions, and receiving feedback.
+- **`personality_test_app.py`**: Implements the personality test simulator, presenting users with 120 personality questions and generating a graphical and textual personality assessment.
+- **`personality_test_nb.py`**: Provides an example personality test.
+- **`scraping_websites.py`**: Scrapes LeetCode for interview questions, including attributes like topics and acceptance rates.
+- **`select_interview_questions.ipynb`**: Processes datasets by filling missing values using Gemini API, calculating heuristic scores, and selecting the top 20 question-job pairs.
+- **`unify_datasets.ipynb`**: Merges collected datasets into three unified datasets: job postings, coding questions with solutions, and open questions.
+- **`visualizations.ipynb`**: Conducts exploratory data analysis (EDA) and visualizes the datasets.
+- **`visualize_similarities&heuristics.ipynb`**: Visualizes and analyzes heuristic scores, exploring transformations for better distribution and representation.
 
 ## Installation
 ### Prerequisites
@@ -37,32 +68,10 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 ### Running the Application
 1. Start the homepage app:
    ```sh
-   python home_page_app.py
+   streamlit run home_page_app.py
    ```
 2. Navigate to the Job Interview or Personality Test app.
 3. Follow the instructions to complete the simulation and receive feedback.
-
-## Project Structure
-```
-📂 job-interview-simulator
-├── 📂 data                      # Contains all datasets (collected and generated)
-├── 📂 requirements              # Requirement files for installation
-│   ├── app_requirements.txt     # Dependencies for running the app
-│   ├── requirements.txt         # Dependencies for full development
-├── answer_questions.ipynb       # Uses Gemini API for simulated user responses & evaluation
-├── calculate_heuristic_score.py # Calculates similarity scores for question-job pairs
-├── consts.py                    # Project constants
-├── evaluate_answers.ipynb       # AI evaluation of user responses
-├── home_page_app.py             # Homepage for navigating between apps
-├── job_interview_simulator_app.py # Interview simulator app
-├── personality_test_app.py      # Personality test app
-├── personality_test_nb.py       # Example personality test
-├── scraping_websites.py         # Scrapes LeetCode for interview questions
-├── select_interview_questions.ipynb # Preprocesses data & selects best questions
-├── unify_datasets.ipynb         # Unifies datasets from multiple sources
-├── visualizations.ipynb         # Exploratory data analysis (EDA) visualizations
-└── visualize_similarities&heuristics.ipynb # Heuristic score analysis
-```
 
 ## Data Collection
 We compiled datasets from various sources:
@@ -71,16 +80,14 @@ We compiled datasets from various sources:
 - **Open Questions**: Gathered from Glassdoor articles.
 - **Personality Test**: Based on the IPIP-NEO-120 dataset.
 
-## Methodologies
-### Question-Job Matching
-- **Topics-Skills Similarity**: Used SentenceTransformer embeddings and cosine similarity.
-- **Difficulty Alignment**: Mapped job seniority to coding question difficulty.
-- **Acceptance Normalization**: Normalized question popularity to prioritize widely used questions.
-
-### AI-Driven Evaluation
-- **Gemini API**: Scores job-question relevance and evaluates user responses.
-- **Embedding Transformations**: Applied transformations for better differentiation.
-- **Personality Assessment**: Evaluates responses based on OCEAN model.
+## Methodology
+The project uses AI-based methodologies, including:
+- **Sentence embeddings** with `SentenceTransformer` for job-question matching.
+- **Cosine similarity** to compute skill-topic relevance.
+- **Weighted heuristic scoring** to rank questions for each job.
+- **Data imputation** via Gemini API to fill missing values.
+- **Personality evaluation** using the `IPIP-NEO-120` model.
+- **AI-assisted answer scoring** using Gemini API.
 
 ## Evaluation
 Our heuristic scores were compared to Gemini’s evaluations:
@@ -103,6 +110,8 @@ Future improvements include expanding datasets, refining heuristics, and optimiz
 
 ---
 ### Contributors
-- **[Your Team Name]**
+- **Amit Shirazi**
+- **Hadar Etzion**
+- **Tomer Baruch**
 
 
