@@ -31,7 +31,7 @@ The Job Interview Simulator is an intelligent system designed to enhance intervi
 The root directory contains the following files and folders:
 
 ### Folder descriptions
-- **`data/`**: Contains all datasets, including collected and created ones.
+- **`data/`**: Contains all datasets, including collected and created ones (see the folder's separate README).
 - **`requirements/`**: Contains dependency files:
   - `app_requirements.txt`: Requirements for running the app as a user.
   - `requirements.txt`: Requirements for running all project files as a developer.
