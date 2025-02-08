@@ -54,12 +54,21 @@ The root directory contains the following files and folders:
 ## Installation  
 
 ### Prerequisites  
-- Python 3.8+  
+- Python 3.8+
 - Required libraries (install using pip):  
   ```sh
   pip install -r requirements/app_requirements.txt  # For running the app  
   pip install -r requirements/requirements.txt  # For development  
-  ```  
+  ```
+- Gemini API Setup:
+  1. Create a file named api_keys.py in the root directory
+  2. In this file, create a dictionary named API_KEYS with your Gemini API keys as values:
+     ```sh
+     API_KEYS = {
+       "first_key": "<your api key>",
+       "second_key": "<another api key>"
+     }
+     ```
 
 ## Usage  
 
