@@ -62,7 +62,7 @@ The root directory contains the following files and folders:
   ```
 - Gemini API Setup:
   1. Create a file named api_keys.py in the root directory
-  2. In this file, create a dictionary named API_KEYS with your Gemini API-keys as the dictionary values:
+  2. In this file, create a dictionary named API_KEYS with your Gemini API-keys as the dictionary values. For example:
      ```sh
      API_KEYS = {
        "first_key": "<your api key>",
